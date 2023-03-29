@@ -24,6 +24,10 @@ ruleset = "rules/ACL4SSR/Clash/Ruleset/Twitter.list"
 
 [[rulesets]]
 group = "🎯 全球直连"
+ruleset = "rules/ACL4SSR/Clash/ChinaDomain.list"
+
+[[rulesets]]
+group = "🎯 全球直连"
 ruleset = "rules/DivineEngine/Surge/Ruleset/China.list"
 
 [[rulesets]]
