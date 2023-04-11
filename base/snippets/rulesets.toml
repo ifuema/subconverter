@@ -1,10 +1,14 @@
 [[rulesets]]
-group = "🌌 YouTube&Twitch"
+group = "🌌 YouTube&Twitch&Spotify"
 ruleset = "rules/ACL4SSR/Clash/Ruleset/YouTube.list"
 
 [[rulesets]]
-group = "🌌 YouTube&Twitch"
+group = "🌌 YouTube&Twitch&Spotify"
 ruleset = "rules/ACL4SSR/Clash/Ruleset/Twitch.list"
+
+[[rulesets]]
+group = "🌌 YouTube&Twitch&Spotify"
+ruleset = "rules/ACL4SSR/Clash/Ruleset/Spotify.list"
 
 [[rulesets]]
 group = "🔰 节点选择"

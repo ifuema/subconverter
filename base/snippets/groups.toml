@@ -4,7 +4,7 @@ type = "select"
 rule = ["[]♻️ 自动选择", "[]🎯 全球直连", ".*"]
 
 [[custom_groups]]
-name = "🌌 YouTube&Twitch"
+name = "🌌 YouTube&Twitch&Spotify"
 type = "select"
 rule = [
     "[]🔰 节点选择",
