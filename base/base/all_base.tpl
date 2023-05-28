@@ -11,7 +11,11 @@ dns:
   default-nameserver:
     - 114.114.114.114
     - 8.8.8.8
+  {% if default(request.redir-host, "false") == "true" %}
+  enhanced-mode: redir-host
+  {% else %}
   enhanced-mode: fake-ip
+  {% endif %}
   fake-ip-range: 198.18.0.1/16
   use-hosts: true
   nameserver:
