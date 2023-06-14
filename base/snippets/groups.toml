@@ -14,7 +14,7 @@ rule = [
 [[custom_groups]]
 name = "♻️ 自动选择"
 type = "url-test"
-rule = [".*"]
+rule = ["^(?!.*s801).*$"]
 url = "http://www.gstatic.com/generate_204"
 interval = 300
 
