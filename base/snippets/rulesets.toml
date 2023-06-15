@@ -12,19 +12,7 @@ ruleset = "rules/ACL4SSR/Clash/Ruleset/Spotify.list"
 
 [[rulesets]]
 group = "🔰 节点选择"
-ruleset = "rules/ACL4SSR/Clash/Ruleset/Google.list"
-
-[[rulesets]]
-group = "🔰 节点选择"
-ruleset = "rules/ACL4SSR/Clash/Ruleset/Github.list"
-
-[[rulesets]]
-group = "🔰 节点选择"
-ruleset = "rules/ACL4SSR/Clash/Telegram.list"
-
-[[rulesets]]
-group = "🔰 节点选择"
-ruleset = "rules/ACL4SSR/Clash/Ruleset/Twitter.list"
+ruleset = "rules/ACL4SSR/Clash/ProxyLite.list"
 
 [[rulesets]]
 group = "🎯 全球直连"
@@ -33,10 +21,6 @@ ruleset = "rules/ACL4SSR/Clash/ChinaDomain.list"
 [[rulesets]]
 group = "🎯 全球直连"
 ruleset = "rules/DivineEngine/Surge/Ruleset/China.list"
-
-[[rulesets]]
-group = "🔰 节点选择"
-ruleset = "rules/ACL4SSR/Clash/ProxyLite.list"
 
 [[rulesets]]
 group = "🎯 全球直连"
