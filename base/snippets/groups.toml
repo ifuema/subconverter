@@ -4,11 +4,18 @@ type = "select"
 rule = ["[]♻️ 自动选择", "[]🎯 全球直连", ".*"]
 
 [[custom_groups]]
-name = "🌌 YouTube&Twitch&Spotify"
+name = "🎥 YouTube&Twitch&Spotify"
 type = "select"
 rule = [
     "[]🔰 节点选择",
     ".*"
+]
+
+[[custom_groups]]
+name = "🎮 SteamDownload"
+type = "select"
+rule = ["[]🎯 全球直连",
+"[]🔰 节点选择"
 ]
 
 [[custom_groups]]

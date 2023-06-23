@@ -1,18 +1,22 @@
 [[rulesets]]
-group = "🌌 YouTube&Twitch&Spotify"
+group = "🎥 YouTube&Twitch&Spotify"
 ruleset = "https://raw.githubusercontent.com/ifuema/subconverter/master/base/rules/ACL4SSR/Clash/Ruleset/YouTube.list"
 
 [[rulesets]]
-group = "🌌 YouTube&Twitch&Spotify"
+group = "🎥 YouTube&Twitch&Spotify"
 ruleset = "https://raw.githubusercontent.com/ifuema/subconverter/master/base/rules/ACL4SSR/Clash/Ruleset/Twitch.list"
 
 [[rulesets]]
-group = "🌌 YouTube&Twitch&Spotify"
+group = "🎥 YouTube&Twitch&Spotify"
 ruleset = "https://raw.githubusercontent.com/ifuema/subconverter/master/base/rules/ACL4SSR/Clash/Ruleset/Spotify.list"
 
 [[rulesets]]
 group = "🔰 节点选择"
 ruleset = "https://raw.githubusercontent.com/ifuema/subconverter/master/base/rules/ACL4SSR/Clash/ProxyLite.list"
+
+[[rulesets]]
+group = "🎮 SteamDownload"
+ruleset = "https://raw.githubusercontent.com/ifuema/subconverter/master/base/rules/ACL4SSR/Clash/Ruleset/SteamCN.list"
 
 [[rulesets]]
 group = "🎯 全球直连"
