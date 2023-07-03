@@ -11,6 +11,10 @@ group = "🎥 YouTube&Twitch&Spotify"
 ruleset = "rules/ACL4SSR/Clash/Ruleset/Spotify.list"
 
 [[rulesets]]
+group = "🎯 全球直连"
+ruleset = "rules/ACL4SSR/Clash/Ruleset/EpicDownload.list"
+
+[[rulesets]]
 group = "🔰 节点选择"
 ruleset = "rules/ACL4SSR/Clash/ProxyLite.list"
 
