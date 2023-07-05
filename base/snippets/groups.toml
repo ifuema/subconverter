@@ -1,7 +1,7 @@
 [[custom_groups]]
 name = "🔰 节点选择"
 type = "select"
-rule = ["[]♻️ 自动选择", "[]🎯 全球直连", ".*"]
+rule = ["[]♻️ 自动选择", "[]🎯 全球直连", "[]⚖️ 负载均衡-轮询", ".*"]
 
 [[custom_groups]]
 name = "🎥 YouTube&Twitch&Spotify"
@@ -24,6 +24,14 @@ type = "url-test"
 rule = ["^(?!.*s801).*$"]
 url = "http://www.gstatic.com/generate_204"
 interval = 300
+
+[[custom_groups]]
+name = "⚖️ 负载均衡-轮询"
+type = "load-balance"
+rule = ["^(?!.*s801).*$"]
+url = "http://www.gstatic.com/generate_204"
+interval = 300
+strategy = 'round-robin'
 
 [[custom_groups]]
 name = "🎯 全球直连"
