@@ -16,7 +16,7 @@ ruleset = "rules/ACL4SSR/Clash/Ruleset/Spotify.list"
 
 [[rulesets]]
 group = "🎯 全球直连"
-ruleset = "rules/ACL4SSR/Clash/Ruleset/EpicDownload.list"
+ruleset = "rules/DivineEngine/Surge/Ruleset/EpicDownload.list"
 
 [[rulesets]]
 group = "🔰 节点选择"
