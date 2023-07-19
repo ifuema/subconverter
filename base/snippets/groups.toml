@@ -15,7 +15,16 @@ rule = [
 name = "🎮 SteamDownload"
 type = "select"
 rule = ["[]🎯 全球直连",
-"[]🔰 节点选择"
+"[]🔰 节点选择",
+"[]🎥 YT&Twitch&TikTok&Spotify"
+]
+
+[[custom_groups]]
+name = "📺 哔哩哔哩"
+type = "select"
+rule = ["[]🎯 全球直连",
+"[]🔰 节点选择",
+"[]🎥 YT&Twitch&TikTok&Spotify"
 ]
 
 [[custom_groups]]

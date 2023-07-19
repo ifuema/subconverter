@@ -23,6 +23,10 @@ group = "🔰 节点选择"
 ruleset = "rules/ACL4SSR/Clash/ProxyLite.list"
 
 [[rulesets]]
+group = "📺 哔哩哔哩"
+ruleset = "rules/DivineEngine/Surge/Ruleset/StreamingMedia/StreamingSE.list"
+
+[[rulesets]]
 group = "🎮 SteamDownload"
 ruleset = "rules/ACL4SSR/Clash/Ruleset/SteamCN.list"
 

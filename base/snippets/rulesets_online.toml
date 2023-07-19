@@ -23,6 +23,10 @@ group = "🔰 节点选择"
 ruleset = "https://raw.githubusercontent.com/ifuema/subconverter/master/base/rules/ACL4SSR/Clash/ProxyLite.list"
 
 [[rulesets]]
+group = "📺 哔哩哔哩"
+ruleset = "https://raw.githubusercontent.com/ifuema/subconverter/master/base/rules/DivineEngine/Surge/Ruleset/StreamingMedia/StreamingSE.list"
+
+[[rulesets]]
 group = "🎮 SteamDownload"
 ruleset = "https://raw.githubusercontent.com/ifuema/subconverter/master/base/rules/ACL4SSR/Clash/Ruleset/SteamCN.list"
 
