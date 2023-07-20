@@ -70,8 +70,6 @@ DOMAIN-SUFFIX,paypalobjects.com
 # > Sohu
 # > Sogo
 # > Steam
-DOMAIN-SUFFIX,steampowered.com
-DOMAIN-SUFFIX,steamstatic.com
 # > Tencent
 USER-AGENT,MicroMessenger*
 USER-AGENT,WeChat*
@@ -105,11 +103,6 @@ DOMAIN,speedtest.macpaw.com
 # > Private Tracker
 DOMAIN-SUFFIX,acg.rip
 DOMAIN-SUFFIX,comicat.org
-DOMAIN-SUFFIX,hdbits.org
-DOMAIN-SUFFIX,hddolby.com
-DOMAIN-SUFFIX,morethan.tv
-DOMAIN-SUFFIX,myanonamouse.net
-DOMAIN-SUFFIX,pterclub.com
 # > Other
 DOMAIN-SUFFIX,360in.com
 DOMAIN-SUFFIX,51ym.me
@@ -172,3 +165,38 @@ DOMAIN-SUFFIX,yizhibo.com
 DOMAIN-SUFFIX,zhihuishu.com
 DOMAIN,download.jetbrains.com
 DOMAIN,images-cn.ssl-images-amazon.com
+DOMAIN-SUFFIX,flyert.com
+DOMAIN,origin-a.akamaihd.net
+# ---(Microsoft)---
+# > Outlook
+DOMAIN,smtp-mail.outlook.com
+# > Windows Server Update Services
+# ------
+DOMAIN-SUFFIX,paypal-mktg.com
+DOMAIN-SUFFIX,cm.steampowered.com
+IP-CIDR,203.205.238.0/23,no-resolve
+DOMAIN-SUFFIX,animebytes.tv
+DOMAIN-SUFFIX,awesome-hd.me
+DOMAIN-SUFFIX,broadcasthe.net
+DOMAIN-SUFFIX,chdbits.co
+DOMAIN-SUFFIX,classix-unlimited.co.uk
+DOMAIN-SUFFIX,empornium.me
+DOMAIN-SUFFIX,gazellegames.net
+DOMAIN-SUFFIX,hdchina.org
+DOMAIN-SUFFIX,hdhome.org
+DOMAIN-SUFFIX,hdsky.me
+DOMAIN-SUFFIX,icetorrent.org
+DOMAIN-SUFFIX,jpopsuki.eu
+DOMAIN-SUFFIX,keepfrds.com
+DOMAIN-SUFFIX,madsrevolution.net
+DOMAIN-SUFFIX,m-team.cc
+DOMAIN-SUFFIX,nanyangpt.com
+DOMAIN-SUFFIX,ncore.cc
+DOMAIN-SUFFIX,open.cd
+DOMAIN-SUFFIX,ourbits.club
+DOMAIN-SUFFIX,passthepopcorn.me
+DOMAIN-SUFFIX,privatehd.to
+DOMAIN-SUFFIX,redacted.ch
+DOMAIN-SUFFIX,springsunday.net
+DOMAIN-SUFFIX,tjupt.org
+DOMAIN-SUFFIX,totheglory.im
