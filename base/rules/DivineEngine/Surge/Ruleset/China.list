@@ -1,56 +1,15 @@
 # China Area Network
-# > 360
-# > Alibaba
-USER-AGENT,%E4%BC%98%E9%85%B7*
-# > Apple
-DOMAIN-SUFFIX,aaplimg.com
-DOMAIN-SUFFIX,apple.co
-DOMAIN-SUFFIX,apple.com
-DOMAIN-SUFFIX,apple-cloudkit.com
-DOMAIN-SUFFIX,appstore.com
-DOMAIN-SUFFIX,cdn-apple.com
-DOMAIN-SUFFIX,icloud.com
-DOMAIN-SUFFIX,icloud-content.com
-DOMAIN-SUFFIX,me.com
-DOMAIN-SUFFIX,mzstatic.com
-# DOMAIN-KEYWORD,apple.com.akadns.net
-# DOMAIN-KEYWORD,icloud.com.akadns.net
-# > Baidu
-# > Battle
-# > bilibili
-DOMAIN-SUFFIX,bilibili.tv
-# > ByteDance
-# > CCTV
-# > ChinaTelecom
-# > DiDi
-# > HunanTV
-# > iQiyi
-# > JD
-# > Kingsoft
-# > Meitu
-# > Meituan
-# > MI
-DOMAIN-SUFFIX,miwifi.com
-# > Microsoft
-# DOMAIN-SUFFIX,microsoft.com
-# DOMAIN-SUFFIX,msecnd.net
-# DOMAIN-SUFFIX,office.com
-# DOMAIN-SUFFIX,office365.com
-# DOMAIN-SUFFIX,s-microsoft.com
-# DOMAIN-SUFFIX,windows.com
-DOMAIN-SUFFIX,visualstudio.com
-# >> Microsoft Software Download
-# DOMAIN,software-download.microsoft.com
-# DOMAIN-KEYWORD,-microsoft-com.akamaized.net
-# >> OneDrive
-# DOMAIN-SUFFIX,1drv.com
-# DOMAIN-SUFFIX,storage.live.com
-# >> Outlook
-DOMAIN-SUFFIX,hotmail.com
-DOMAIN-SUFFIX,outlook.com
+DOMAIN-SUFFIX,flyert.com
+DOMAIN-SUFFIX,gandi.net
+DOMAIN-SUFFIX,snapdrop.net
+DOMAIN,download.jetbrains.com
+DOMAIN,origin-a.akamaihd.net
+# ---(Microsoft)---
+# > Outlook
 DOMAIN,outlook.office365.com
+DOMAIN,smtp-mail.outlook.com
 DOMAIN,smtp.office365.com
-# >> Windows Server Update Services
+# > Windows Server Update Services
 DOMAIN-SUFFIX,dl.delivery.mp.microsoft.com
 DOMAIN-SUFFIX,update.microsoft.com
 DOMAIN-SUFFIX,windowsupdate.com
@@ -58,145 +17,25 @@ DOMAIN-SUFFIX,windowsupdate.microsoft.com
 DOMAIN,download.microsoft.com
 DOMAIN,wustat.windows.com
 DOMAIN,ntservicepack.microsoft.com
-# > NetEase
-USER-AGENT,NeteaseMusic*
-USER-AGENT,%E7%BD%91%E6%98%93%E4%BA%91%E9%9F%B3%E4%B9%90*
+# ------
 # > PayPal
-USER-AGENT,PayPal*
 DOMAIN-SUFFIX,paypal.com
 DOMAIN-SUFFIX,paypal.me
+DOMAIN-SUFFIX,paypal-mktg.com
 DOMAIN-SUFFIX,paypalobjects.com
-# > Sina
-# > Sohu
-# > Sogo
 # > Steam
+DOMAIN-SUFFIX,steamserver.net
 # > Tencent
-USER-AGENT,MicroMessenger*
-USER-AGENT,WeChat*
-USER-AGENT,%E4%BC%81%E4%B8%9A%E5%BE%AE%E4%BF%A1*
-DOMAIN-SUFFIX,servicewechat.com
-DOMAIN-SUFFIX,tencent-cloud.com
-DOMAIN,file-igamecj.akamaized.net
 IP-CIDR,182.254.116.0/24,no-resolve
+IP-CIDR,203.205.238.0/23,no-resolve
 IP-CIDR,203.205.254.0/23,no-resolve
-# > Content Delivery Network
-DOMAIN-SUFFIX,ccgslb.com
-DOMAIN-SUFFIX,ccgslb.net
-DOMAIN-SUFFIX,chinanetcenter.com
-DOMAIN-SUFFIX,meixincdn.com
-DOMAIN-SUFFIX,staticdn.net
-DOMAIN-SUFFIX,wangsu.com
 # > IP Query
-DOMAIN-SUFFIX,ip.la
-DOMAIN-SUFFIX,ip.sb
-DOMAIN-SUFFIX,ip-cdn.com
-DOMAIN-SUFFIX,ipv6-test.com
-DOMAIN-SUFFIX,myip.la
-DOMAIN-SUFFIX,test-ipv6.com
-DOMAIN-SUFFIX,whatismyip.com
 DOMAIN,ip.istatmenus.app
 DOMAIN,sms.imagetasks.com
 # > Speed Test
-# DOMAIN-SUFFIX,speedtest.net
 DOMAIN-SUFFIX,netspeedtestmaster.com
 DOMAIN,speedtest.macpaw.com
 # > Private Tracker
 DOMAIN-SUFFIX,acg.rip
 DOMAIN-SUFFIX,comicat.org
-# > Other
-DOMAIN-SUFFIX,360in.com
-DOMAIN-SUFFIX,51ym.me
-DOMAIN-SUFFIX,99.com
-DOMAIN-SUFFIX,accuweather.com
-DOMAIN-SUFFIX,agora.io
-DOMAIN-SUFFIX,aicoinstorge.com
-DOMAIN-SUFFIX,amd.com
-DOMAIN-SUFFIX,b612.net
-DOMAIN-SUFFIX,bdatu.com
-DOMAIN-SUFFIX,beitaichufang.com
-DOMAIN-SUFFIX,booking.com
-DOMAIN-SUFFIX,bstatic.com
-DOMAIN-SUFFIX,cailianpress.com
-DOMAIN-SUFFIX,chunyu.mobi
-DOMAIN-SUFFIX,cmbchina.com
-DOMAIN-SUFFIX,cmbimg.com
-DOMAIN-SUFFIX,dji.net
-DOMAIN-SUFFIX,docschina.org
-DOMAIN-SUFFIX,eudic.net
-DOMAIN-SUFFIX,futu5.com
-DOMAIN-SUFFIX,futunn.com
-DOMAIN-SUFFIX,gandi.net
-DOMAIN-SUFFIX,gcores.com
-DOMAIN-SUFFIX,getpricetag.com
-DOMAIN-SUFFIX,heweather.net
-DOMAIN-SUFFIX,hostbuf.com
-DOMAIN-SUFFIX,ibm.com
-DOMAIN-SUFFIX,infinitynewtab.com
-DOMAIN-SUFFIX,java.com
-DOMAIN-SUFFIX,jidian.im
-DOMAIN-SUFFIX,kaiyanapp.com
-DOMAIN-SUFFIX,kaspersky-labs.com
-DOMAIN-SUFFIX,keepcdn.com
-DOMAIN-SUFFIX,kkmh.com
-DOMAIN-SUFFIX,lanzous.com
-DOMAIN-SUFFIX,luojilab.com
-DOMAIN-SUFFIX,maoyun.tv
-DOMAIN-SUFFIX,mls-cdn.com
-DOMAIN-SUFFIX,myzaker.com
-DOMAIN-SUFFIX,nim-lang-cn.org
-DOMAIN-SUFFIX,ntp.org
-DOMAIN-SUFFIX,nvidia.com
-DOMAIN-SUFFIX,plex.tv
-DOMAIN-SUFFIX,qweather.com
-DOMAIN-SUFFIX,qyer.com
-DOMAIN-SUFFIX,qyerstatic.com
-DOMAIN-SUFFIX,raychase.net
-DOMAIN-SUFFIX,ronghub.com
-DOMAIN-SUFFIX,scomper.me
-DOMAIN-SUFFIX,shouqianba.com
-DOMAIN-SUFFIX,sm.ms
-DOMAIN-SUFFIX,snapdrop.net
-DOMAIN-SUFFIX,s-reader.com
-DOMAIN-SUFFIX,subhd.tv
-DOMAIN-SUFFIX,takungpao.com
-DOMAIN-SUFFIX,tophub.today
-DOMAIN-SUFFIX,uning.com
-DOMAIN-SUFFIX,yizhibo.com
-DOMAIN-SUFFIX,zhihuishu.com
-DOMAIN,download.jetbrains.com
-DOMAIN,images-cn.ssl-images-amazon.com
-DOMAIN-SUFFIX,flyert.com
-DOMAIN,origin-a.akamaihd.net
-# ---(Microsoft)---
-# > Outlook
-DOMAIN,smtp-mail.outlook.com
-# > Windows Server Update Services
-# ------
-DOMAIN-SUFFIX,paypal-mktg.com
-DOMAIN-SUFFIX,cm.steampowered.com
-IP-CIDR,203.205.238.0/23,no-resolve
-DOMAIN-SUFFIX,animebytes.tv
-DOMAIN-SUFFIX,awesome-hd.me
-DOMAIN-SUFFIX,broadcasthe.net
-DOMAIN-SUFFIX,chdbits.co
-DOMAIN-SUFFIX,classix-unlimited.co.uk
-DOMAIN-SUFFIX,empornium.me
-DOMAIN-SUFFIX,gazellegames.net
-DOMAIN-SUFFIX,hdchina.org
-DOMAIN-SUFFIX,hdhome.org
-DOMAIN-SUFFIX,hdsky.me
-DOMAIN-SUFFIX,icetorrent.org
-DOMAIN-SUFFIX,jpopsuki.eu
-DOMAIN-SUFFIX,keepfrds.com
-DOMAIN-SUFFIX,madsrevolution.net
-DOMAIN-SUFFIX,m-team.cc
-DOMAIN-SUFFIX,nanyangpt.com
-DOMAIN-SUFFIX,ncore.cc
-DOMAIN-SUFFIX,open.cd
-DOMAIN-SUFFIX,ourbits.club
-DOMAIN-SUFFIX,passthepopcorn.me
-DOMAIN-SUFFIX,privatehd.to
-DOMAIN-SUFFIX,redacted.ch
-DOMAIN-SUFFIX,springsunday.net
-DOMAIN-SUFFIX,tjupt.org
 DOMAIN-SUFFIX,totheglory.im

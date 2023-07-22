@@ -19,12 +19,16 @@ group = "🎯 全球直连"
 ruleset = "rules/DivineEngine/Surge/Ruleset/EpicDownload.list"
 
 [[rulesets]]
+group = "📺 哔哩哔哩"
+ruleset = "rules/DivineEngine/Surge/Ruleset/StreamingMedia/StreamingSE.list"
+
+[[rulesets]]
 group = "🔰 节点选择"
 ruleset = "rules/ACL4SSR/Clash/ProxyLite.list"
 
 [[rulesets]]
-group = "📺 哔哩哔哩"
-ruleset = "rules/DivineEngine/Surge/Ruleset/StreamingMedia/StreamingSE.list"
+group = "🔰 节点选择"
+ruleset = "rules/DivineEngine/Surge/Ruleset/Global.list"
 
 [[rulesets]]
 group = "🎮 SteamDownload"
