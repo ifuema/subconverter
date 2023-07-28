@@ -9,8 +9,8 @@ dns:
   enable: true
   listen: 0.0.0.0:53
   default-nameserver:
-    - 114.114.114.114
     - 8.8.8.8
+    - 114.114.114.114
   {% if default(request.redir-host, "false") == "true" %}
   enhanced-mode: redir-host
   {% else %}
@@ -20,14 +20,12 @@ dns:
   use-hosts: true
   nameserver:
     - https://dns.alidns.com/dns-query
-    - https://doh.pub/dns-query
     - tls://dns.alidns.com:853
-    - tls://1.12.12.12:853
   fallback:
-    - https://dns.cloudflare.com/dns-query
-    - https://dns.google/dns-query
-    - tls://dns.google:853
-    - tls://1.1.1.1:853
+    - https://1.1.1.1/dns-query
+    - https://1.0.0.1/dns-query
+    - https://208.67.222.222/dns-query
+    - tls://8.8.4.4:853
   fallback-filter:
     geoip: true
     geoip-code: CN
