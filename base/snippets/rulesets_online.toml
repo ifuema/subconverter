@@ -16,6 +16,10 @@ ruleset = "https://raw.githubusercontent.com/ifuema/subconverter/master/base/rul
 
 [[rulesets]]
 group = "🎯 全球直连"
+ruleset = "https://raw.githubusercontent.com/ifuema/subconverter/master/base/rules/ACL4SSR/Clash/Ruleset/Apple.list"
+
+[[rulesets]]
+group = "🎯 全球直连"
 ruleset = "https://raw.githubusercontent.com/ifuema/subconverter/master/base/rules/DivineEngine/Surge/Ruleset/EpicDownload.list"
 
 [[rulesets]]
