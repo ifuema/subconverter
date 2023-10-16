@@ -157,6 +157,11 @@ bool applyMatcher(const std::string &rule, std::string &real_rule, const Proxy &
 
 void processRemark(std::string &oldremark, std::string &newremark, string_array &remarks_list, bool proc_comma = true)
 {
+    // Replace every '=' with '-' in the remark string to avoid parse errors from the clients.
+    //     Surge is tested to yield an error when handling '=' in the remark string, 
+    //     not sure if other clients have the same problem.
+    std::replace(oldremark.begin(), oldremark.end(), '=', '-');
+
     if(proc_comma)
     {
         if(oldremark.find(',') != std::string::npos)
@@ -439,11 +444,27 @@ void proxyToClash(std::vector<Proxy> &nodes, YAML::Node &yamlnode, const ProxyGr
             if(std::all_of(x.Password.begin(), x.Password.end(), ::isdigit) && !x.Password.empty())
                 singleproxy["password"].SetTag("str");
             break;
+        case ProxyType::WireGuard:
+            singleproxy["type"] = "wireguard";
+            singleproxy["public-key"] = x.PublicKey;
+            singleproxy["private-key"] = x.PrivateKey;
+            singleproxy["ip"] = x.SelfIP;
+            if(!x.SelfIPv6.empty())
+                singleproxy["ipv6"] = x.SelfIPv6;
+            if(!x.PreSharedKey.empty())
+                singleproxy["preshared-key"] = x.PreSharedKey;
+            if(!x.DnsServers.empty())
+                singleproxy["dns"] = x.DnsServers;
+            if(x.Mtu > 0)
+                singleproxy["mtu"] = x.Mtu;
+            break;
         default:
             continue;
         }
 
-        if(udp)
+        // UDP is not supported yet in clash using snell
+        // sees in https://dreamacro.github.io/clash/configuration/outbound.html#snell
+        if(udp && x.Type != ProxyType::Snell)
             singleproxy["udp"] = true;
         if(block)
             singleproxy.SetStyle(YAML::EmitterStyle::Block);
@@ -588,6 +609,24 @@ std::string proxyToClash(std::vector<Proxy> &nodes, const std::string &base_conf
     return output_content;
 }
 
+// peer = (public-key = bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=, allowed-ips = "0.0.0.0/0, ::/0", endpoint = engage.cloudflareclient.com:2408, client-id = 139/184/125),(public-key = bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=, endpoint = engage.cloudflareclient.com:2408)
+std::string generatePeer(Proxy &node, bool client_id_as_reserved = false)
+{
+    std::string result;
+    result += "public-key = " + node.PublicKey;
+    result += ", endpoint = " + node.Hostname + ":" + std::to_string(node.Port);
+    if(!node.AllowedIPs.empty())
+        result += ", allowed-ips = \"" + node.AllowedIPs + "\"";
+    if(!node.ClientId.empty())
+    {
+        if(client_id_as_reserved)
+            result += ", reserved = [" + node.ClientId + "]";
+        else
+            result += ", client-id = " + node.ClientId;
+    }
+    return result;
+}
+
 std::string proxyToSurge(std::vector<Proxy> &nodes, const std::string &base_conf, std::vector<RulesetContent> &ruleset_content_array, const ProxyGroupConfigs &extra_proxy_group, int surge_ver, extra_settings &ext)
 {
     INIReader ini;
@@ -637,8 +676,8 @@ std::string proxyToSurge(std::vector<Proxy> &nodes, const std::string &base_conf
         scv.define(x.AllowInsecure);
         tls13.define(x.TLS13);
 
-        std::string proxy;
-        string_array args;
+        std::string proxy, section, real_section;
+        string_array args, headers;
 
         switch(x.Type)
         {
@@ -676,12 +715,13 @@ std::string proxyToSurge(std::vector<Proxy> &nodes, const std::string &base_conf
             case "tcp"_hash:
                 break;
             case "ws"_hash:
-                if(host.empty())
-                    proxy += ", ws=true, ws-path=" + path + ", sni=" + hostname;
-                else
-                    proxy += ", ws=true, ws-path=" + path + ", sni=" + hostname + ", ws-headers=Host:" + host;
+                proxy += ", ws=true, ws-path=" + path + ", sni=" + hostname;
+                if(!host.empty())
+                    headers.push_back("Host:" + host);
                 if(!edge.empty())
-                    proxy += "|Edge:" + edge;
+                    headers.push_back("Edge:" + edge);
+                if(!headers.empty())
+                    proxy += ", ws-headers=" + join(headers, "|");
                 break;
             default:
                 continue;
@@ -754,9 +794,35 @@ std::string proxyToSurge(std::vector<Proxy> &nodes, const std::string &base_conf
         case ProxyType::Snell:
             proxy = "snell, " + hostname + ", " + port + ", psk=" + password;
             if(!obfs.empty())
+            {
                 proxy += ", obfs=" + obfs;
                 if(!host.empty())
                     proxy += ", obfs-host=" + host;
+            }
+            if(x.SnellVersion != 0)
+                proxy += ", version=" + std::to_string(x.SnellVersion);
+            break;
+        case ProxyType::WireGuard:
+            if(surge_ver < 4 && surge_ver != -3)
+                continue;
+            section = randomStr(5);
+            real_section = "WireGuard " + section;
+            proxy = "wireguard, section-name=" + section;
+            if(!x.TestUrl.empty())
+                proxy += ", test-url=" + x.TestUrl;
+            ini.set(real_section, "private-key", x.PrivateKey);
+            ini.set(real_section, "self-ip", x.SelfIP);
+            if(!x.SelfIPv6.empty())
+                ini.set(real_section, "self-ip-v6", x.SelfIPv6);
+            if(!x.PreSharedKey.empty())
+                ini.set(real_section, "preshared-key", x.PreSharedKey);
+            if(!x.DnsServers.empty())
+                ini.set(real_section, "dns-server", join(x.DnsServers, ","));
+            if(x.Mtu > 0)
+                ini.set(real_section, "mtu", std::to_string(x.Mtu));
+            if(x.KeepAlive > 0)
+                ini.set(real_section, "keepalive", std::to_string(x.KeepAlive));
+            ini.set(real_section, "peer", "(" + generatePeer(x) + ")");
             break;
         default:
             continue;
@@ -1441,8 +1507,8 @@ void proxyToQuanX(std::vector<Proxy> &nodes, INIReader &ini, std::vector<Ruleset
             break;
         case ProxyGroupType::SSID:
             type = "ssid";
-            for(auto iter = x.Proxies.begin(); iter != x.Proxies.end(); iter++)
-                filtered_nodelist.emplace_back(replaceAllDistinct(*iter, "=", ":"));
+            for(const auto & proxy : x.Proxies)
+                filtered_nodelist.emplace_back(replaceAllDistinct(proxy, "=", ":"));
             break;
         default:
             continue;
@@ -1482,6 +1548,12 @@ void proxyToQuanX(std::vector<Proxy> &nodes, INIReader &ini, std::vector<Ruleset
         std::string proxies = join(filtered_nodelist, ", ");
 
         std::string singlegroup = type + "=" + x.Name + ", " + proxies;
+        if(type != "static")
+        {
+            singlegroup += ", check-interval=" + std::to_string(x.Interval);
+            if(x.Tolerance > 0)
+                singlegroup += ", tolerance=" + std::to_string(x.Tolerance);
+        }
         ini.set("{NONAME}", singlegroup);
     }
 
@@ -1753,6 +1825,7 @@ std::string proxyToLoon(std::vector<Proxy> &nodes, const std::string &base_conf,
     string_array remarks_list;
 
     ini.store_any_line = true;
+    ini.add_direct_save_section("Plugin");
     if(ini.parse(base_conf) != INIREADER_EXCEPTION_NONE && !ext.nodelist)
     {
         writeLog(0, "Loon base loader failed with error: " + ini.get_last_error(), LOG_LEVEL_ERROR);
@@ -1834,6 +1907,37 @@ std::string proxyToLoon(std::vector<Proxy> &nodes, const std::string &base_conf,
             if(!scv.is_undef())
                 proxy += ",skip-cert-verify=" + std::string(scv.get() ? "true" : "false");
             break;
+        case ProxyType::SOCKS5:
+            proxy = "socks5," + hostname + "," + port;
+            if (!username.empty() && !password.empty())
+                proxy += "," + username + ",\"" + password + "\"";
+            proxy += ",over-tls=" + std::string(tlssecure ? "true" : "false");
+            if (tlssecure)
+            {
+                if(!host.empty())
+                    proxy += ",tls-name=" + host;
+                if(!scv.is_undef())
+                    proxy += ",skip-cert-verify=" + std::string(scv.get() ? "true" : "false");
+            }
+            break;
+        case ProxyType::WireGuard:
+            proxy = "wireguard, interface-ip=" + x.SelfIP;
+            if(!x.SelfIPv6.empty())
+                proxy += ", interface-ipv6=" + x.SelfIPv6;
+            proxy += ", private-key=" + x.PrivateKey;
+            for(const auto &y : x.DnsServers)
+            {
+                if(isIPv4(y))
+                    proxy += ", dns=" + y;
+                else if(isIPv6(y))
+                    proxy += ", dnsv6=" + y;
+            }
+            if(x.Mtu > 0)
+                proxy += ", mtu=" + std::to_string(x.Mtu);
+            if(x.KeepAlive > 0)
+                proxy += ", keepalive=" + std::to_string(x.KeepAlive);
+            proxy += ", peers=[{" + generatePeer(x, true) + "}]";
+            break;
         default:
             continue;
         }
@@ -1857,8 +1961,11 @@ std::string proxyToLoon(std::vector<Proxy> &nodes, const std::string &base_conf,
     if(ext.nodelist)
         return output_nodelist;
 
+    string_multimap original_groups;
     ini.set_current_section("Proxy Group");
+    ini.get_items(original_groups);
     ini.erase_section();
+
     for(const ProxyGroupConfig &x : extra_proxy_group)
     {
         string_array filtered_nodelist;
@@ -1888,16 +1995,43 @@ std::string proxyToLoon(std::vector<Proxy> &nodes, const std::string &base_conf,
         if(filtered_nodelist.empty())
             filtered_nodelist.emplace_back("DIRECT");
 
+        auto iter = std::find_if(original_groups.begin(), original_groups.end(), [&](const string_multimap::value_type &n)
+        {
+            return trim(n.first) == x.Name;
+        });
+
+        if(iter != original_groups.end())
+        {
+            string_array vArray = split(iter->second, ",");
+            if(vArray.size() > 1)
+            {
+                if(trim(vArray[vArray.size() - 1]).find("img-url") == 0)
+                    filtered_nodelist.emplace_back(trim(vArray[vArray.size() - 1]));
+            }
+        }
+
         group = x.TypeStr() + ",";
         /*
         for(std::string &y : filtered_nodelist)
             group += "," + y;
         */
         group += join(filtered_nodelist, ",");
-        if(x.Type != ProxyGroupType::Select) {
+        if(x.Type != ProxyGroupType::Select)
+        {
             group += ",url=" + x.Url + ",interval=" + std::to_string(x.Interval);
-            if (x.Type == ProxyGroupType::LoadBalance)
-                group += ",strategy=" + std::string(x.Strategy == BalanceStrategy::RoundRobin ? "round-robin" : "pcc");
+            if(x.Type == ProxyGroupType::LoadBalance)
+            {
+                group += ",algorithm=" + std::string(x.Strategy == BalanceStrategy::RoundRobin ? "round-robin" : "pcc");
+                if(x.Timeout > 0)
+                    group += ",max-timeout=" + std::to_string(x.Timeout);
+            }
+            if(x.Type == ProxyGroupType::URLTest)
+            {
+                if(x.Tolerance > 0)
+                    group += ",tolerance=" + std::to_string(x.Tolerance);
+            }
+            if(x.Type == ProxyGroupType::Fallback)
+                group += ",max-timeout=" + std::to_string(x.Timeout);
         }
 
         ini.set("{NONAME}", x.Name + " = " + group); //insert order
