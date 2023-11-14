@@ -47,6 +47,10 @@ group = "🎯 全球直连"
 ruleset = "rules/DivineEngine/Surge/Ruleset/China.list"
 
 [[rulesets]]
+group = "🚀 SpeedTestMobile"
+ruleset = "rules/DivineEngine/Surge/Ruleset/SpeedTest.list"
+
+[[rulesets]]
 group = "🎯 全球直连"
 ruleset = "rules/ACL4SSR/Clash/LocalAreaNetwork.list"
 

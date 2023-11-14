@@ -47,6 +47,10 @@ group = "🎯 全球直连"
 ruleset = "https://raw.githubusercontent.com/ifuema/subconverter/master/base/rules/DivineEngine/Surge/Ruleset/China.list"
 
 [[rulesets]]
+group = "🚀 SpeedTestMobile"
+ruleset = "https://raw.githubusercontent.com/ifuema/subconverter/master/base/rules/DivineEngine/Surge/Ruleset/SpeedTest.list"
+
+[[rulesets]]
 group = "🎯 全球直连"
 ruleset = "https://raw.githubusercontent.com/ifuema/subconverter/master/base/rules/ACL4SSR/Clash/LocalAreaNetwork.list"
 
