@@ -11,9 +11,11 @@ using string = std::string;
 using string_size = std::string::size_type;
 using string_array = std::vector<std::string>;
 using string_map = std::map<std::string, std::string>;
+using string_multimap = std::multimap<std::string, std::string>;
 using string_pair_array = std::vector<std::pair<std::string, std::string>>;
 
-std::vector<std::string> split(const std::string &s, const std::string &seperator);
+std::vector<std::string> split(const std::string &s, const std::string &separator);
+std::vector<std::string_view> split(std::string_view s, char separator);
 std::string join(const string_array &arr, const std::string &delimiter);
 
 template <typename InputIt>
@@ -27,6 +29,7 @@ std::string join(InputIt first, InputIt last, const std::string &delimiter)
 }
 
 std::string getUrlArg(const std::string &url, const std::string &request);
+std::string getUrlArg(const string_multimap &url, const std::string &request);
 std::string replaceAllDistinct(std::string str, const std::string &old_value, const std::string &new_value);
 std::string trimOf(const std::string& str, char target, bool before = true, bool after = true);
 std::string trim(const std::string& str, bool before = true, bool after = true);

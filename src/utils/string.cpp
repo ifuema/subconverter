@@ -7,8 +7,9 @@
 #include <time.h>
 
 #include "string.h"
+#include "map_extra.h"
 
-std::vector<std::string> split(const std::string &s, const std::string &seperator)
+std::vector<std::string> split(const std::string &s, const std::string &separator)
 {
     std::vector<std::string> result;
     string_size i = 0;
@@ -19,8 +20,8 @@ std::vector<std::string> split(const std::string &s, const std::string &seperato
         while(i != s.size() && flag == 0)
         {
             flag = 1;
-            for(string_size x = 0; x < seperator.size(); ++x)
-                if(s[i] == seperator[x])
+            for(char x : separator)
+                if(s[i] == x)
                 {
                     ++i;
                     flag = 0;
@@ -32,8 +33,8 @@ std::vector<std::string> split(const std::string &s, const std::string &seperato
         string_size j = i;
         while(j != s.size() && flag == 0)
         {
-            for(string_size x = 0; x < seperator.size(); ++x)
-                if(s[j] == seperator[x])
+            for(char x : separator)
+                if(s[j] == x)
                 {
                     flag = 1;
                     break;
@@ -42,6 +43,45 @@ std::vector<std::string> split(const std::string &s, const std::string &seperato
                 ++j;
         }
         if(i != j)
+        {
+            result.push_back(s.substr(i, j-i));
+            i = j;
+        }
+    }
+    return result;
+}
+
+std::vector<std::string_view> split(std::string_view s, char separator)
+{
+    std::vector<std::string_view> result;
+    string_size i = 0;
+
+    while (i != s.size())
+    {
+        int flag = 0;
+        while(i != s.size() && flag == 0)
+        {
+            flag = 1;
+            if(s[i] == separator)
+            {
+                ++i;
+                flag = 0;
+                break;
+            }
+        }
+
+        flag = 0;
+        string_size j = i;
+        while(j != s.size() && flag == 0)
+        {
+            if(s[j] == separator)
+            {
+                flag = 1;
+                break;
+            }
+            ++j;
+        }
+        if (i != j)
         {
             result.push_back(s.substr(i, j-i));
             i = j;
@@ -295,6 +335,14 @@ std::string getUrlArg(const std::string &url, const std::string &request)
             break;
         pos--;
     }
+    return "";
+}
+
+std::string getUrlArg(const string_multimap &url, const std::string &request)
+{
+    auto it = url.find(request);
+    if(it != url.end())
+        return it->second;
     return "";
 }
 
