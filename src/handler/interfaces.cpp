@@ -6,27 +6,27 @@
 #include <inja.hpp>
 #include <yaml-cpp/yaml.h>
 
-#include "../config/binding.h"
-#include "../generator/config/nodemanip.h"
-#include "../generator/config/ruleconvert.h"
-#include "../generator/config/subexport.h"
-#include "../generator/template/templates.h"
-#include "../script/cron.h"
-#include "../script/script_quickjs.h"
-#include "../server/webserver.h"
-#include "../utils/base64/base64.h"
-#include "../utils/file_extra.h"
-#include "../utils/ini_reader/ini_reader.h"
-#include "../utils/logger.h"
-#include "../utils/network.h"
-#include "../utils/regexp.h"
-#include "../utils/stl_extra.h"
-#include "../utils/string.h"
-#include "../utils/string_hash.h"
-#include "../utils/system.h"
-#include "../utils/system.h"
-#include "../utils/urlencode.h"
-#include "../utils/yamlcpp_extra.h"
+#include "config/binding.h"
+#include "generator/config/nodemanip.h"
+#include "generator/config/ruleconvert.h"
+#include "generator/config/subexport.h"
+#include "generator/template/templates.h"
+#include "script/cron.h"
+#include "script/script_quickjs.h"
+#include "server/webserver.h"
+#include "utils/base64/base64.h"
+#include "utils/file_extra.h"
+#include "utils/ini_reader/ini_reader.h"
+#include "utils/logger.h"
+#include "utils/network.h"
+#include "utils/regexp.h"
+#include "utils/stl_extra.h"
+#include "utils/string.h"
+#include "utils/string_hash.h"
+#include "utils/system.h"
+#include "utils/system.h"
+#include "utils/urlencode.h"
+#include "utils/yamlcpp_extra.h"
 #include "interfaces.h"
 #include "multithread.h"
 #include "settings.h"
@@ -331,12 +331,12 @@ std::string subconverter(RESPONSE_CALLBACK_ARGS)
         readConf();
 
     /// string values
-    std::string argUrl = urlDecode(getUrlArg(argument, "url"));
-    std::string argGroupName = urlDecode(getUrlArg(argument, "group")), argUploadPath = getUrlArg(argument, "upload_path");
-    std::string argIncludeRemark = urlDecode(getUrlArg(argument, "include")), argExcludeRemark = urlDecode(getUrlArg(argument, "exclude"));
-    std::string argCustomGroups = urlSafeBase64Decode(getUrlArg(argument, "groups")), argCustomRulesets = urlSafeBase64Decode(getUrlArg(argument, "ruleset")), argExternalConfig = urlDecode(getUrlArg(argument, "config"));
-    std::string argDeviceID = getUrlArg(argument, "dev_id"), argFilename = urlDecode(getUrlArg(argument, "filename")), argUpdateInterval = getUrlArg(argument, "interval"), argUpdateStrict = getUrlArg(argument, "strict");
-    std::string argRenames = urlDecode(getUrlArg(argument, "rename")), argFilterScript = urlDecode(getUrlArg(argument, "filter_script"));
+    std::string argUrl = getUrlArg(argument, "url");
+    std::string argGroupName = getUrlArg(argument, "group"), argUploadPath = getUrlArg(argument, "upload_path");
+    std::string argIncludeRemark = getUrlArg(argument, "include"), argExcludeRemark = getUrlArg(argument, "exclude");
+    std::string argCustomGroups = urlSafeBase64Decode(getUrlArg(argument, "groups")), argCustomRulesets = urlSafeBase64Decode(getUrlArg(argument, "ruleset")), argExternalConfig = getUrlArg(argument, "config");
+    std::string argDeviceID = getUrlArg(argument, "dev_id"), argFilename = getUrlArg(argument, "filename"), argUpdateInterval = getUrlArg(argument, "interval"), argUpdateStrict = getUrlArg(argument, "strict");
+    std::string argRenames = getUrlArg(argument, "rename"), argFilterScript = getUrlArg(argument, "filter_script");
 
     /// switches with default value
     tribool argUpload = getUrlArg(argument, "upload"), argEmoji = getUrlArg(argument, "emoji"), argAddEmoji = getUrlArg(argument, "add_emoji"), argRemoveEmoji = getUrlArg(argument, "remove_emoji");
@@ -701,7 +701,7 @@ std::string subconverter(RESPONSE_CALLBACK_ARGS)
 
     ProxyGroupConfigs dummy_group;
     std::vector<RulesetContent> dummy_ruleset;
-    std::string managed_url = base64Decode(urlDecode(getUrlArg(argument, "profile_data")));
+    std::string managed_url = base64Decode(getUrlArg(argument, "profile_data"));
     if(managed_url.empty())
         managed_url = global.managedConfigPrefix + "/sub?" + joinArguments(argument);
 
@@ -1160,15 +1160,15 @@ std::string getProfile(RESPONSE_CALLBACK_ARGS)
     auto &argument = request.argument;
     int *status_code = &response.status_code;
 
-    std::string name = urlDecode(getUrlArg(argument, "name")), token = urlDecode(getUrlArg(argument, "token"));
+    std::string name = getUrlArg(argument, "name"), token = getUrlArg(argument, "token");
     string_array profiles = split(name, "|");
-    name = profiles[0];
-    if(token.empty() || name.empty())
+    if(token.empty() || profiles.empty())
     {
         *status_code = 403;
         return "Forbidden";
     }
     std::string profile_content;
+    name = profiles[0];
     /*if(vfs::vfs_exist(name))
     {
         profile_content = vfs::vfs_get(name);
@@ -1440,7 +1440,7 @@ std::string renderTemplate(RESPONSE_CALLBACK_ARGS)
     auto &argument = request.argument;
     int *status_code = &response.status_code;
 
-    std::string path = urlDecode(getUrlArg(argument, "path"));
+    std::string path = getUrlArg(argument, "path");
     writeLog(0, "Trying to render template '" + path + "'...", LOG_LEVEL_INFO);
 
     if(!startsWith(path, global.templatePath) || !fileExist(path))
