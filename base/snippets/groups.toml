@@ -4,7 +4,15 @@ type = "select"
 rule = ["[]♻️ 自动选择", "[]🎯 全球直连", "[]⚖️ 负载均衡-轮询", ".*"]
 
 [[custom_groups]]
-name = "🎥 YT&Twitch&TikTok&Spotify"
+name = "🎥 YouTube&Twitch&Spotify"
+type = "select"
+rule = [
+    "[]🔰 节点选择",
+    ".*"
+]
+
+[[custom_groups]]
+name = "🎶 TikTok"
 type = "select"
 rule = [
     "[]🔰 节点选择",
@@ -16,7 +24,7 @@ name = "🎮 SteamDownload"
 type = "select"
 rule = ["[]🎯 全球直连",
 "[]🔰 节点选择",
-"[]🎥 YT&Twitch&TikTok&Spotify"
+"[]🎥 YouTube&Twitch&Spotify"
 ]
 
 [[custom_groups]]
@@ -24,7 +32,7 @@ name = "📺 哔哩哔哩"
 type = "select"
 rule = ["[]🎯 全球直连",
 "[]🔰 节点选择",
-"[]🎥 YT&Twitch&TikTok&Spotify"
+"[]🎥 YouTube&Twitch&Spotify"
 ]
 
 [[custom_groups]]

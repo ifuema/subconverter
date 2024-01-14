@@ -1,17 +1,17 @@
 [[rulesets]]
-group = "🎥 YT&Twitch&TikTok&Spotify"
+group = "🎶 TikTok"
 ruleset = "https://raw.githubusercontent.com/ifuema/subconverter/master/base/rules/ACL4SSR/Clash/Ruleset/TikTok.list"
 
 [[rulesets]]
-group = "🎥 YT&Twitch&TikTok&Spotify"
+group = "🎥 YouTube&Twitch&Spotify"
 ruleset = "https://raw.githubusercontent.com/ifuema/subconverter/master/base/rules/ACL4SSR/Clash/Ruleset/YouTube.list"
 
 [[rulesets]]
-group = "🎥 YT&Twitch&TikTok&Spotify"
+group = "🎥 YouTube&Twitch&Spotify"
 ruleset = "https://raw.githubusercontent.com/ifuema/subconverter/master/base/rules/ACL4SSR/Clash/Ruleset/Twitch.list"
 
 [[rulesets]]
-group = "🎥 YT&Twitch&TikTok&Spotify"
+group = "🎥 YouTube&Twitch&Spotify"
 ruleset = "https://raw.githubusercontent.com/ifuema/subconverter/master/base/rules/ACL4SSR/Clash/Ruleset/Spotify.list"
 
 [[rulesets]]
