@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>URL Encoder for Subscription</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        input[type="text"] {
+            width: 80%;
+            padding: 8px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 4px;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        #encoded-url {
+            margin-top: 20px;
+        }
+        textarea {
+            width: 80%;
+            height: 100px;
+            padding: 8px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+            resize: vertical;
+        }
+        #error-message {
+            color: red;
+            font-size: 14px;
+            margin-top: 5px;
+        }
+    </style>
+</head>
+<body>
+    <h2>URL Encoder for Subscription</h2>
+    <p>Enter the subscription URL to encode:</p>
+    <input type="text" id="subscription-input" placeholder="Enter subscription URL">
+    <button onclick="encodeSubscription()">Encode Subscription</button>
+    <div id="encoded-url">
+        <textarea id="encoded-textarea" readonly></textarea>
+    </div>
+    <div id="error-message"></div>
+
+    <script>
+        function encodeSubscription() {
+            var inputElement = document.getElementById('subscription-input');
+            var subscriptionURL = inputElement.value.trim();
+            
+            if (subscriptionURL === "") {
+                var errorMessage = document.getElementById('error-message');
+                errorMessage.textContent = "Please enter a subscription URL.";
+                return;
+            }
+
+            var encodedSubscriptionURL = encodeURIComponent(subscriptionURL);
+            var finalSubscriptionURL = "https://sub.xeton.dev/sub?target=clash&config=https%3A%2F%2Fraw.githubusercontent.com%2Fifuema%2Fsubconverter%2Fmaster%2Fbase%2Fconfig%2Fexample_external_config.toml&url=" + encodedSubscriptionURL;
+
+            var encodedTextarea = document.getElementById('encoded-textarea');
+            encodedTextarea.textContent = finalSubscriptionURL;
+
+            // Clear error message if any
+            var errorMessage = document.getElementById('error-message');
+            errorMessage.textContent = "";
+        }
+    </script>
+</body>
+</html>
