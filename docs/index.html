@@ -9,7 +9,10 @@
             font-family: Arial, sans-serif;
             margin: 20px;
         }
-        input[type="text"] {
+        .url-input-container {
+            margin-bottom: 10px;
+        }
+        .url-input-container input[type="text"] {
             width: 80%;
             padding: 8px;
             font-size: 16px;
@@ -51,8 +54,13 @@
 </head>
 <body>
     <h2>URL Encoder for Subscription</h2>
-    <p>Enter the subscription URL to encode:</p>
-    <input type="text" id="subscription-input" placeholder="Enter subscription URL">
+    <p>Enter the subscription URLs to encode:</p>
+    <div id="url-inputs">
+        <div class="url-input-container">
+            <input type="text" class="subscription-input" placeholder="Enter subscription URL">
+        </div>
+    </div>
+    <button onclick="addURLInput()">+</button>
     <button onclick="encodeSubscription()">Encode Subscription</button>
     <div id="encoded-url">
         <textarea id="encoded-textarea" readonly></textarea>
@@ -60,18 +68,37 @@
     <div id="error-message"></div>
 
     <script>
+        function addURLInput() {
+            var urlInputsDiv = document.getElementById('url-inputs');
+            var newURLInputContainer = document.createElement('div');
+            newURLInputContainer.classList.add('url-input-container');
+            var newURLInput = document.createElement('input');
+            newURLInput.type = 'text';
+            newURLInput.classList.add('subscription-input');
+            newURLInput.placeholder = 'Enter subscription URL';
+            newURLInputContainer.appendChild(newURLInput);
+            urlInputsDiv.appendChild(newURLInputContainer);
+        }
+
         function encodeSubscription() {
-            var inputElement = document.getElementById('subscription-input');
-            var subscriptionURL = inputElement.value.trim();
-            
-            if (subscriptionURL === "") {
+            var inputElements = document.getElementsByClassName('subscription-input');
+            var subscriptionURLs = [];
+
+            for (var i = 0; i < inputElements.length; i++) {
+                var url = inputElements[i].value.trim();
+                if (url !== "") {
+                    subscriptionURLs.push(url);
+                }
+            }
+
+            if (subscriptionURLs.length === 0) {
                 var errorMessage = document.getElementById('error-message');
-                errorMessage.textContent = "Please enter a subscription URL.";
+                errorMessage.textContent = "Please enter at least one subscription URL.";
                 return;
             }
 
-            var encodedSubscriptionURL = encodeURIComponent(subscriptionURL);
-            var finalSubscriptionURL = "https://sub.xeton.dev/sub?target=clash&config=https%3A%2F%2Fraw.githubusercontent.com%2Fifuema%2Fsubconverter%2Fmaster%2Fbase%2Fconfig%2Fexample_external_config.toml&url=" + encodedSubscriptionURL;
+            var encodedSubscriptionURLs = encodeURIComponent(subscriptionURLs.join('|'));
+            var finalSubscriptionURL = "https://sub.xeton.dev/sub?target=clash&config=https%3A%2F%2Fraw.githubusercontent.com%2Fifuema%2Fsubconverter%2Fmaster%2Fbase%2Fconfig%2Fexample_external_config.toml&url=" + encodedSubscriptionURLs;
 
             var encodedTextarea = document.getElementById('encoded-textarea');
             encodedTextarea.textContent = finalSubscriptionURL;
