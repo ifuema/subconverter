@@ -54,6 +54,14 @@
 </head>
 <body>
     <h2>URL Encoder for Subscription</h2>
+    <p>Choose the subscription provider:</p>
+    <select id="provider-select">
+        <option value="default">Default (https://sub.xeton.dev)</option>
+        <option value="custom">Custom (replace with your own URL)</option>
+    </select>
+    <div id="custom-url-input" style="display: none;">
+        <input type="text" id="custom-url" placeholder="Enter custom URL">
+    </div>
     <p>Enter the subscription URLs to encode:</p>
     <div id="url-inputs">
         <div class="url-input-container">
@@ -81,6 +89,18 @@
         }
 
         function encodeSubscription() {
+            var providerSelect = document.getElementById('provider-select');
+            var selectedProvider = providerSelect.value;
+            var urlBase;
+
+            if (selectedProvider === 'default') {
+                urlBase = 'https://sub.xeton.dev/sub?target=clash&config=https%3A%2F%2Fraw.githubusercontent.com%2Fifuema%2Fsubconverter%2Fmaster%2Fbase%2Fconfig%2Fexample_external_config.toml&url=';
+            } else {
+                var customURLInput = document.getElementById('custom-url');
+                var customURL = customURLInput.value.trim();
+                urlBase = customURL + '/sub?target=clash&config=https%3A%2F%2Fraw.githubusercontent.com%2Fifuema%2Fsubconverter%2Fmaster%2Fbase%2Fconfig%2Fexample_external_config.toml&url=';
+            }
+
             var inputElements = document.getElementsByClassName('subscription-input');
             var subscriptionURLs = [];
 
@@ -98,7 +118,7 @@
             }
 
             var encodedSubscriptionURLs = encodeURIComponent(subscriptionURLs.join('|'));
-            var finalSubscriptionURL = "https://sub.xeton.dev/sub?target=clash&config=https%3A%2F%2Fraw.githubusercontent.com%2Fifuema%2Fsubconverter%2Fmaster%2Fbase%2Fconfig%2Fexample_external_config.toml&url=" + encodedSubscriptionURLs;
+            var finalSubscriptionURL = urlBase + encodedSubscriptionURLs;
 
             var encodedTextarea = document.getElementById('encoded-textarea');
             encodedTextarea.textContent = finalSubscriptionURL;
@@ -107,6 +127,18 @@
             var errorMessage = document.getElementById('error-message');
             errorMessage.textContent = "";
         }
+
+        document.getElementById('provider-select').addEventListener('change', function() {
+            var customURLInput = document.getElementById('custom-url-input');
+            var providerSelect = document.getElementById('provider-select');
+            var selectedProvider = providerSelect.value;
+
+            if (selectedProvider === 'custom') {
+                customURLInput.style.display = 'block';
+            } else {
+                customURLInput.style.display = 'none';
+            }
+        });
     </script>
 </body>
 </html>
