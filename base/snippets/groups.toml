@@ -48,6 +48,13 @@ rule = ["[]🎯 全球直连",
 ]
 
 [[custom_groups]]
+name = "🔮 Gemini"
+type = "select"
+rule = ["[]🔰 节点选择",
+".*"
+]
+
+[[custom_groups]]
 name = "♻️ 自动选择"
 type = "url-test"
 rule = ["^(?!.*s801).*$"]
