@@ -1,6 +1,6 @@
 [[rulesets]]
 group = "🎶 TikTok"
-ruleset = "rules/ACL4SSR/Clash/Ruleset/TikTok.list"
+ruleset = "rules/DivineEngine/Surge/Ruleset/StreamingMedia/Video/TikTok.list"
 
 [[rulesets]]
 group = "🎥 YouTube&Twitch&Spotify"
