@@ -27,7 +27,11 @@ group = "📺 哔哩哔哩"
 ruleset = "https://raw.githubusercontent.com/ifuema/subconverter/master/base/rules/DivineEngine/Surge/Ruleset/StreamingMedia/StreamingSE.list"
 
 [[rulesets]]
-group = "🔮 OpenAi&Gemini"
+group = "🎲 Gemini"
+ruleset = "https://raw.githubusercontent.com/ifuema/subconverter/master/base/rules/DivineEngine/Surge/Ruleset/Gemini.list"
+
+[[rulesets]]
+group = "🔮 OpenAi"
 ruleset = "https://raw.githubusercontent.com/ifuema/subconverter/master/base/rules/ACL4SSR/Clash/Ruleset/OpenAi.list"
 
 [[rulesets]]

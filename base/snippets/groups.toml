@@ -48,7 +48,14 @@ rule = ["[]🎯 全球直连",
 ]
 
 [[custom_groups]]
-name = "🔮 OpenAi&Gemini"
+name = "🔮 OpenAi"
+type = "select"
+rule = ["[]🔰 节点选择",
+".*"
+]
+
+[[custom_groups]]
+name = "🎲 Gemini"
 type = "select"
 rule = ["[]🔰 节点选择",
 ".*"
