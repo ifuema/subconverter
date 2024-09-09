@@ -1,10 +1,12 @@
 {% if request.target == "clash" or request.target == "clashr" %}
 
-mixed-port: 7890
-allow-lan: true
-bind-address: '*'
-mode: rule
-external-controller: 127.0.0.1:9090
+port: {{ default(global.clash.http_port, "7890") }}
+socks-port: {{ default(global.clash.socks_port, "7891") }}
+allow-lan: {{ default(global.clash.allow_lan, "true") }}
+mode: Rule
+log-level: {{ default(global.clash.log_level, "info") }}
+external-controller: {{ default(global.clash.external_controller, "127.0.0.1:9090") }}
+{% if default(request.clash.dns, "") == "1" %}
 dns:
   enable: true
   listen: 0.0.0.0:53
@@ -405,7 +407,7 @@ enhanced-mode-by-rule = true
             "store_fakeip": true
         },
         "clash_api": {
-            "external_controller": "127.0.0.1:9090",
+            "external_controller": "{{ default(global.clash.external_controller, "127.0.0.1:9090") }}",
             "external_ui": "dashboard"
         }
     }
