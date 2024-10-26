@@ -56,7 +56,8 @@
     <h2>URL Encoder for Subscription</h2>
     <p>Choose the subscription provider:</p>
     <select id="provider-select">
-        <option value="default">Default (https://sub.xeton.dev)</option>
+        <option value="default">Default (https://api.dler.io)</option>
+        <option value="sub.xeton.dev">Default (https://sub.xeton.dev)</option>
         <option value="custom">Custom (replace with your own URL)</option>
     </select>
     <div id="custom-url-input" style="display: none;">
@@ -94,6 +95,8 @@
             var urlBase;
 
             if (selectedProvider === 'default') {
+                urlBase = 'https://api.dler.io/sub?target=clash&config=https%3A%2F%2Fraw.githubusercontent.com%2Fifuema%2Fsubconverter%2Fmaster%2Fbase%2Fconfig%2Fexample_external_config.toml&url=';
+            } else if (selectedProvider === 'sub.xeton.dev') {
                 urlBase = 'https://sub.xeton.dev/sub?target=clash&config=https%3A%2F%2Fraw.githubusercontent.com%2Fifuema%2Fsubconverter%2Fmaster%2Fbase%2Fconfig%2Fexample_external_config.toml&url=';
             } else {
                 var customURLInput = document.getElementById('custom-url');
