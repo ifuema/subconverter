@@ -7,7 +7,6 @@ mode: rule
 external-controller: 127.0.0.1:9090
 dns:
   enable: true
-  listen: 0.0.0.0:53
   default-nameserver:
     - 8.8.8.8
     - 114.114.114.114
