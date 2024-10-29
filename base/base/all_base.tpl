@@ -19,13 +19,12 @@ dns:
   fake-ip-range: 198.18.0.1/16
   use-hosts: true
   nameserver:
-    - https://dns.alidns.com/dns-query
-    - tls://dns.alidns.com:853
+    - https://223.5.5.5/dns-query
+    - https://120.53.53.53/dns-query
   fallback:
     - https://1.1.1.1/dns-query
     - https://1.0.0.1/dns-query
     - https://208.67.222.222/dns-query
-    - tls://8.8.4.4:853
   fallback-filter:
     geoip: true
     geoip-code: CN
