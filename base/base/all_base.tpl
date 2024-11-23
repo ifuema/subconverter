@@ -18,8 +18,8 @@ dns:
   fake-ip-range: 198.18.0.1/16
   use-hosts: true
   nameserver:
-    - https://223.5.5.5/dns-query
-    - https://120.53.53.53/dns-query
+    - https://dns.alidns.com/dns-query
+    - https://doh.pub/dns-query
   fallback:
     - https://1.1.1.1/dns-query
     - https://1.0.0.1/dns-query

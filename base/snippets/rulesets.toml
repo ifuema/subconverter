@@ -27,8 +27,12 @@ group = "📺 哔哩哔哩"
 ruleset = "rules/DivineEngine/Surge/Ruleset/StreamingMedia/StreamingSE.list"
 
 [[rulesets]]
-group = "🎲 Gemini"
-ruleset = "rules/DivineEngine/Surge/Ruleset/Gemini.list"
+group = "🎲 Gemini&Claude"
+ruleset = "rules/ACL4SSR/Clash/Ruleset/Gemini.list"
+
+[[rulesets]]
+group = "🎲 Gemini&Claude"
+ruleset = "rules/ACL4SSR/Clash/Ruleset/Claude.list"
 
 [[rulesets]]
 group = "🔮 OpenAi"
