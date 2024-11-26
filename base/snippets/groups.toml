@@ -28,7 +28,8 @@ name = "🎮 SteamDownload"
 type = "select"
 rule = ["[]🎯 全球直连",
 "[]🔰 节点选择",
-"[]🎥 YouTube&Twitch&Spotify"
+"[]🎥 YouTube&Twitch&Spotify",
+".*"
 ]
 
 [[custom_groups]]
