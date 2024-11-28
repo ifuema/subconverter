@@ -51,8 +51,8 @@ group = "🎮 SteamDownload"
 ruleset = "https://raw.githubusercontent.com/ifuema/subconverter/master/base/rules/ACL4SSR/Clash/Ruleset/SteamCN.list"
 
 [[rulesets]]
-group = "⛔️ 广告拦截"
-ruleset = "https://raw.githubusercontent.com/ifuema/subconverter/master/base/rules/AWAvenue-Ads-Rule/Filters/AWAvenue-Ads-Rule-QuantumultX.list"
+group = "REJECT"
+ruleset = "https://raw.githubusercontent.com/ifuema/subconverter/master/base/rules/AWAvenue-Ads-Rule/Filters/AWAvenue-Ads-Rule-Surge-RULE-SET.list"
 
 [[rulesets]]
 group = "🎯 全球直连"
