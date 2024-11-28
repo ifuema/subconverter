@@ -83,6 +83,11 @@ type = "select"
 rule = ["[]DIRECT"]
 
 [[custom_groups]]
+name = "⛔️ 广告拦截"
+type = "select"
+rule = ["[]REJECT"]
+
+[[custom_groups]]
 name = "🐟 漏网之鱼"
 type = "select"
 rule = ["[]🔰 节点选择",

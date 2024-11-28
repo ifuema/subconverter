@@ -51,6 +51,10 @@ group = "🎮 SteamDownload"
 ruleset = "rules/ACL4SSR/Clash/Ruleset/SteamCN.list"
 
 [[rulesets]]
+group = "⛔️ 广告拦截"
+ruleset = "rules/AWAvenue-Ads-Rule/Filters/AWAvenue-Ads-Rule-QuantumultX.list"
+
+[[rulesets]]
 group = "🎯 全球直连"
 ruleset = "rules/ACL4SSR/Clash/ChinaDomain.list"
 
