@@ -1,7 +1,7 @@
 !Title: AWAvenue Ads Rule
 !--------------------------------------
-!Total lines: 700
-!Version: 1.5.5-release
+!Total lines: 740
+!Version: 1.5.6-release
 
 !Homepage: https://github.com/TG-Twilight/AWAvenue-Ads-Rule
 !License: https://github.com/TG-Twilight/AWAvenue-Ads-Rule/blob/main/LICENSE
@@ -32,6 +32,7 @@
 127.0.0.1 ad.bwton.com
 127.0.0.1 ad.cctv.com
 127.0.0.1 ad.cyapi.cn
+127.0.0.1 ad.doubleclick.net
 127.0.0.1 ad.partner.gifshow.com
 127.0.0.1 ad.qingting.fm
 127.0.0.1 ad.qq.com
@@ -47,10 +48,13 @@
 127.0.0.1 adapi.izuiyou.com
 127.0.0.1 adapi.yynetwk.com
 127.0.0.1 adashbc.ut.taobao.com
+127.0.0.1 adc.hpplay.cn
+127.0.0.1 adcdn.hpplay.cn
 127.0.0.1 adcdn.tencentmusic.com
 127.0.0.1 adclick.g.doubleclick.net
 127.0.0.1 adclick.tencentmusic.com
 127.0.0.1 adcolony.com
+127.0.0.1 addata.jd.com
 127.0.0.1 adexpo.tencentmusic.com
 127.0.0.1 adfilter.imtt.qq.com
 127.0.0.1 adfstat.yandex.ru
@@ -93,16 +97,23 @@
 127.0.0.1 ads5-normal-lf.zijieapi.com
 127.0.0.1 ads5-normal-lq.zijieapi.com
 127.0.0.1 ads5-normal.zijieapi.com
+127.0.0.1 adse.test.ximalaya.com
+127.0.0.1 adse.wsa.ximalaya.com
+127.0.0.1 adse.ximalaya.com
+127.0.0.1 adsebs.ximalaya.com
 127.0.0.1 adsense.google.cn
 127.0.0.1 adserver.unityads.unity3d.com
 127.0.0.1 adservice.google.cn
 127.0.0.1 adservice.google.com
+127.0.0.1 adservice.sigmob.cn
 127.0.0.1 adserviceretry.kugou.com
 127.0.0.1 adsfile.bssdlbig.kugou.com
+127.0.0.1 adsfile.qq.com
 127.0.0.1 adsfilebssdlbig.ali.kugou.com
 127.0.0.1 adsfileretry.service.kugou.com
 127.0.0.1 adsfs-sdkconfig.heytapimage.com
 127.0.0.1 adsfs.oppomobile.com
+127.0.0.1 adslvfile.qq.com
 127.0.0.1 adsmart.konka.com
 127.0.0.1 adsmind.gdtimg.com
 127.0.0.1 adsmind.ugdtimg.com
@@ -142,6 +153,7 @@
 127.0.0.1 aiseet.aa.atianqi.com
 127.0.0.1 ali-ad.a.yximgs.com
 127.0.0.1 alog.umeng.com
+127.0.0.1 alogus.umeng.com
 127.0.0.1 als.baidu.com
 127.0.0.1 amdcopen.m.taobao.com
 127.0.0.1 amdcopen.m.umeng.com
@@ -183,14 +195,17 @@
 127.0.0.1 api.jietuhb.com
 127.0.0.1 api.kingdata.ksyun.com
 127.0.0.1 api.statsig.com
+127.0.0.1 api.touch-moblie.com
 127.0.0.1 api5-normal-quic-lf.ixigua.com
 127.0.0.1 apiyd.my91app.com
 127.0.0.1 apks.webxiaobai.top
 127.0.0.1 app-measurement.com
+127.0.0.1 appcfg.v.qq.com
 127.0.0.1 appcloud2.in.zhihu.com
 127.0.0.1 applog.lc.quark.cn
 127.0.0.1 applog.uc.cn
 127.0.0.1 applog.zijieapi.com
+127.0.0.1 aspect-upush.umeng.com
 127.0.0.1 ata-sdk-uuid-report.dreport.meituan.net
 127.0.0.1 auction.unityads.unity3d.com
 127.0.0.1 audid-api.taobao.com
@@ -227,12 +242,14 @@
 127.0.0.1 canvas-cdn.gdt.qq.com
 127.0.0.1 catalog.fjwhcbsh.com
 127.0.0.1 cbjs.baidu.com
+127.0.0.1 ccc-x.jd.com
 127.0.0.1 ccs.umeng.com
 127.0.0.1 cctv.adsunion.com
 127.0.0.1 cdn-ad.wtzw.com
 127.0.0.1 cdn-ads.oss-cn-shanghai.aliyuncs.com
 127.0.0.1 cdn-plugin-sync-upgrade-juui.hismarttv.com
 127.0.0.1 cdn.ad.xiaomi.com
+127.0.0.1 cdn.aiclk.com
 127.0.0.1 cdn.ynuf.aliapp.org
 127.0.0.1 cfg.imtt.qq.com
 127.0.0.1 chat1.jd.com
@@ -249,6 +266,7 @@
 127.0.0.1 commdata.v.qq.com
 127.0.0.1 config.chsmarttv.com
 127.0.0.1 config.unityads.unity3d.com
+127.0.0.1 cpc-service-square.aiclk.com
 127.0.0.1 cpro.baidustatic.com
 127.0.0.1 crashlytics.com
 127.0.0.1 crashlyticsreports-pa.googleapis.com
@@ -259,6 +277,7 @@
 127.0.0.1 data.mistat.india.xiaomi.com
 127.0.0.1 data.mistat.rus.xiaomi.com
 127.0.0.1 data.mistat.xiaomi.com
+127.0.0.1 dc.sigmob.cn
 127.0.0.1 diagnosis.ad.xiaomi.com
 127.0.0.1 dig.bdurl.net
 127.0.0.1 dl.zuimeitianqi.com
@@ -285,8 +304,13 @@
 127.0.0.1 events-drcn.op.dbankcloud.cn
 127.0.0.1 events.reddit.com
 127.0.0.1 events.redditmedia.com
+127.0.0.1 fclog.baidu.com
+127.0.0.1 feed-image.baidu.com
+127.0.0.1 file.daihuo.qq.com
 127.0.0.1 firebaselogging-pa.googleapis.com
 127.0.0.1 flurry.com
+127.0.0.1 frontend-perf-service.e.kuaishou.com
+127.0.0.1 fxgate.baidu.com
 127.0.0.1 g-adnet.hiaiabc.com
 127.0.0.1 g-staic.ganjingworld.com
 127.0.0.1 g2.ganjing.world
@@ -302,6 +326,7 @@
 127.0.0.1 ggx03.miguvideo.com
 127.0.0.1 globalapi.ad.xiaomi.com
 127.0.0.1 google-analytics.com
+127.0.0.1 googleads.g.doubleclick.net
 127.0.0.1 googleadservices-cn.com
 127.0.0.1 googleadservices.com
 127.0.0.1 googletagservices-cn.com
@@ -330,7 +355,6 @@
 127.0.0.1 hybrid.miniapp.taobao.com
 127.0.0.1 hye.comp.360os.com
 127.0.0.1 hyt.comp.360os.com
-127.0.0.1 i.snssdk.com
 127.0.0.1 iad.apple.com
 127.0.0.1 iadctest.qwapi.com
 127.0.0.1 iadsdk.apple.com
@@ -346,6 +370,7 @@
 127.0.0.1 images.outbrainimg.com
 127.0.0.1 images.pinduoduo.com
 127.0.0.1 img-c.heytapimage.com
+127.0.0.1 img-x.jd.com
 127.0.0.1 img.adnyg.com
 127.0.0.1 img.adnyg.com.w.kunlungr.com
 127.0.0.1 imtmp.net
@@ -362,8 +387,10 @@
 127.0.0.1 jpush.html5.qq.com
 127.0.0.1 jpush.io
 127.0.0.1 jswebcollects.kugou.com
+127.0.0.1 kde.qq.com
 127.0.0.1 kepler.jd.com
 127.0.0.1 kl.67it.com
+127.0.0.1 klink.volceapplog.com
 127.0.0.1 knicks.jd.com
 127.0.0.1 ks.pull.yximgs.com
 127.0.0.1 launcher.smart-tv.cn
@@ -383,8 +410,11 @@
 127.0.0.1 log-api.pangolin-sdk-toutiao.com
 127.0.0.1 log-report.com
 127.0.0.1 log-sdk.gifshow.com
+127.0.0.1 log-sdk.ksapisrv.com
 127.0.0.1 log-upload-os.hoyoverse.com
 127.0.0.1 log-upload.mihoyo.com
+127.0.0.1 log-verify.dutils.com
+127.0.0.1 log-verify.hiaiabc.com
 127.0.0.1 log.ad.xiaomi.com
 127.0.0.1 log.aispeech.com
 127.0.0.1 log.amemv.com
@@ -404,11 +434,13 @@
 127.0.0.1 log.zijieapi.com
 127.0.0.1 log1.cmpassport.com
 127.0.0.1 logbak.hicloud.com
+127.0.0.1 logrcv.aiclk.com
 127.0.0.1 logs.amap.com
 127.0.0.1 logservice.hicloud.com
 127.0.0.1 logservice1.hicloud.com
 127.0.0.1 logtj.kugou.com
 127.0.0.1 logupdate.avlyun.sec.miui.com
+127.0.0.1 luimg.baidu.com
 127.0.0.1 m-adnet.hiaiabc.com
 127.0.0.1 m.ad.zhangyue.com
 127.0.0.1 m.atm.youku.com
@@ -446,6 +478,7 @@
 127.0.0.1 mssdk.volces.com
 127.0.0.1 mssdk.zijieapi.com
 127.0.0.1 mtj.baidu.com
+127.0.0.1 nadvideo2.baidu.com
 127.0.0.1 newvoice.chiq5.smart-tv.cn
 127.0.0.1 nmetrics.samsung.com
 127.0.0.1 notes-analytics-events.apple.com
@@ -457,10 +490,11 @@
 127.0.0.1 open.e.kuaishou.cn
 127.0.0.1 open.e.kuaishou.com
 127.0.0.1 open.kuaishouzt.com
-127.0.0.1 open.kwaishouzt.com
 127.0.0.1 open.kwaizt.com
+127.0.0.1 open.snssdk.com
 127.0.0.1 optimus-ads.amap.com
 127.0.0.1 orbit.jd.com
+127.0.0.1 oss.cdn.aiclk.com
 127.0.0.1 oth.eve.mdt.qq.com
 127.0.0.1 oth.str.mdt.qq.com
 127.0.0.1 otheve.play.aiseet.atianqi.com
@@ -504,6 +538,7 @@
 127.0.0.1 res2.hubcloud.com.cn
 127.0.0.1 res3.hubcloud.com.cn
 127.0.0.1 resolve.umeng.com
+127.0.0.1 rev.aiclk.com
 127.0.0.1 review.gdtimg.com
 127.0.0.1 rms-drcn.platform.dbankcloud.cn
 127.0.0.1 roi.soulapp.cn
@@ -517,7 +552,6 @@
 127.0.0.1 samsung-com.112.2o7.net
 127.0.0.1 samsungads.com
 127.0.0.1 sanme2.taisantech.com
-127.0.0.1 saveu5-normal-lq.zijieapi.com
 127.0.0.1 scdown.qq.com
 127.0.0.1 scs.openspeech.cn
 127.0.0.1 sdk-ab-config.qquanquan.com
@@ -605,6 +639,7 @@
 127.0.0.1 tnc3-bjlgy.zijieapi.com
 127.0.0.1 toblog.ctobsnssdk.com
 127.0.0.1 trace.qq.com
+127.0.0.1 tracelog-debug.aiclk.com
 127.0.0.1 tracelog-debug.qquanquan.com
 127.0.0.1 track.lc.quark.cn
 127.0.0.1 track.uc.cn
@@ -633,8 +668,11 @@
 127.0.0.1 union.baidu.com
 127.0.0.1 update.avlyun.sec.miui.com
 127.0.0.1 update.lejiao.tv
+127.0.0.1 update0.aiclk.com
 127.0.0.1 upgrade-update.hismarttv.com
+127.0.0.1 uranus.jd.com
 127.0.0.1 us.l.qq.com
+127.0.0.1 usr-api.aiclk.com
 127.0.0.1 v.adintl.cn
 127.0.0.1 v.adx.hubcloud.com.cn
 127.0.0.1 v1-ad.video.yximgs.com
@@ -680,6 +718,7 @@
 127.0.0.1 w1.zskwai.com
 127.0.0.1 watson.microsoft.com
 127.0.0.1 watson.telemetry.microsoft.com
+127.0.0.1 wcp.taobao.com
 127.0.0.1 weather-analytics-events.apple.com
 127.0.0.1 weather-community-drcn.weather.dbankcloud.cn
 127.0.0.1 webstat.qiumibao.com
@@ -695,11 +734,11 @@
 127.0.0.1 wximg.wxs.qq.com
 127.0.0.1 wxsmw.wxs.qq.com
 127.0.0.1 wxsnsad.tc.qq.com
+127.0.0.1 wxsnsdy.tc.qq.com
 127.0.0.1 wxsnsdy.wxs.qq.com
 127.0.0.1 wxsnsdythumb.wxs.qq.com
 127.0.0.1 xc.gdt.qq.com
 127.0.0.1 xiaomi-dtv.m.cn.miaozhen.com
-127.0.0.1 xiaoshuo.wtzw.com
 127.0.0.1 xlivrdr.com
 127.0.0.1 xlmzc.cnjp-exp.com
 127.0.0.1 xlog.jd.com
@@ -711,3 +750,4 @@
 127.0.0.1 youku-acs.m.taobao.com
 127.0.0.1 youxi.kugou.com
 127.0.0.1 zeus.ad.xiaomi.com
+127.0.0.1 zhihu-web-analytics.zhihu.com

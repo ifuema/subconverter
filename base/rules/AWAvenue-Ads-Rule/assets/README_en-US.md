@@ -1,6 +1,8 @@
+<div align="left">
 <a href="/README.md">中文</a>&nbsp;|&nbsp;
 <a href="/Files/README_en-US.md">English</a> &nbsp;|&nbsp;
-<a href="/assets/README_Update.md">Update Log(Chinese only)</a> 
+<a href="/assets/README_Update.md">Update Log(Chinese only)</a> &nbsp;|&nbsp;
+<a href="https://awavenue.top/">Official Website</a> 
 </div>
 
 
@@ -47,7 +49,7 @@ Using Adblock syntax, we intercept various ad SDKs at the network layer within A
 These rules are compatible with AdGuard Home, AdGuard, AdGuard DNS, and other Adblock syntax ad-filtering tools.
 
 - [GitHub Subscription](https://raw.githubusercontent.com/TG-Twilight/AWAvenue-Ads-Rule/main/AWAvenue-Ads-Rule.txt)
-- [Tianming CFCDN Mirror](https://github.tmby.shop/https://raw.githubusercontent.com/TG-Twilight/AWAvenue-Ads-Rule/main/AWAvenue-Ads-Rule.txt)
+- [Tianming CFCDN Mirror](https://github.boki.moe/https://raw.githubusercontent.com/TG-Twilight/AWAvenue-Ads-Rule/main/AWAvenue-Ads-Rule.txt)
 - [jsDelivr (gcore) Mirror](https://gcore.jsdelivr.net/gh/TG-Twilight/AWAvenue-Ads-Rule@main/AWAvenue-Ads-Rule.txt)
 - [ghproxy-gci Mirror](https://ghp.ci/https://raw.githubusercontent.com/TG-Twilight/AWAvenue-Ads-Rule/main/AWAvenue-Ads-Rule.txt)
 
