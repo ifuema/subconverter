@@ -20,16 +20,6 @@ dns:
   nameserver:
     - https://dns.alidns.com/dns-query
     - https://doh.pub/dns-query
-  fallback:
-    - https://1.1.1.1/dns-query
-    - https://1.0.0.1/dns-query
-    - https://208.67.222.222/dns-query
-  fallback-filter:
-    geoip: true
-    geoip-code: CN
-    ipcidr:
-      - 240.0.0.0/4
-      - 0.0.0.0/32
 {% if local.clash.new_field_name == "true" %}
 proxies: ~
 proxy-groups: ~
