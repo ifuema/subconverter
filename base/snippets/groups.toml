@@ -56,7 +56,7 @@ rule = ["[]🔰 节点选择",
 ]
 
 [[custom_groups]]
-name = "🎲 Gemini&Claude"
+name = "🎲 GoogleAI&Claude"
 type = "select"
 rule = ["[]🔰 节点选择",
 ".*"

@@ -27,11 +27,15 @@ group = "📺 哔哩哔哩"
 ruleset = "https://raw.githubusercontent.com/ifuema/subconverter/master/base/rules/DivineEngine/Surge/Ruleset/StreamingMedia/StreamingSE.list"
 
 [[rulesets]]
-group = "🎲 Gemini&Claude"
+group = "🎲 GoogleAI&Claude"
 ruleset = "https://raw.githubusercontent.com/ifuema/subconverter/master/base/rules/ACL4SSR/Clash/Ruleset/Gemini.list"
 
 [[rulesets]]
-group = "🎲 Gemini&Claude"
+group = "🎲 GoogleAI&Claude"
+ruleset = "https://raw.githubusercontent.com/ifuema/subconverter/master/base/rules/DivineEngine/Surge/Ruleset/Notebooklm.list"
+
+[[rulesets]]
+group = "🎲 GoogleAI&Claude"
 ruleset = "https://raw.githubusercontent.com/ifuema/subconverter/master/base/rules/ACL4SSR/Clash/Ruleset/Claude.list"
 
 [[rulesets]]
