@@ -95,13 +95,13 @@
             var urlBase;
 
             if (selectedProvider === 'default') {
-                urlBase = 'https://sub.xeton.dev/sub?target=clash&config=https%3A%2F%2Fraw.githubusercontent.com%2Fifuema%2Fsubconverter%2Fmaster%2Fbase%2Fconfig%2Fexample_external_config.toml&url=';
+                urlBase = 'https://sub.xeton.dev/sub?target=clash&udp=true&config=https%3A%2F%2Fraw.githubusercontent.com%2Fifuema%2Fsubconverter%2Fmaster%2Fbase%2Fconfig%2Fexample_external_config.toml&url=';
             } else if (selectedProvider === 'api.dler.io') {
-                urlBase = 'https://api.dler.io/sub?target=clash&config=https%3A%2F%2Fraw.githubusercontent.com%2Fifuema%2Fsubconverter%2Fmaster%2Fbase%2Fconfig%2Fexample_external_config.toml&url=';
+                urlBase = 'https://api.dler.io/sub?target=clash&udp=true&config=https%3A%2F%2Fraw.githubusercontent.com%2Fifuema%2Fsubconverter%2Fmaster%2Fbase%2Fconfig%2Fexample_external_config.toml&url=';
             } else {
                 var customURLInput = document.getElementById('custom-url');
                 var customURL = customURLInput.value.trim();
-                urlBase = customURL + '/sub?target=clash&config=https%3A%2F%2Fraw.githubusercontent.com%2Fifuema%2Fsubconverter%2Fmaster%2Fbase%2Fconfig%2Fexample_external_config.toml&url=';
+                urlBase = customURL + '/sub?target=clash&udp=true&config=https%3A%2F%2Fraw.githubusercontent.com%2Fifuema%2Fsubconverter%2Fmaster%2Fbase%2Fconfig%2Fexample_external_config.toml&url=';
             }
 
             var inputElements = document.getElementsByClassName('subscription-input');
