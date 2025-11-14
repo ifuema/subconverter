@@ -1,9 +1,9 @@
 #Title: AWAvenue Ads Rule
 #--------------------------------------
-#Total lines: 777
-#Version: 1.6.5-release
-#Update time: 2025-05-10 00:22:18 UTC+8
-#Update content: more xiaohongshu ads block. #136
+#Total lines: 863
+#Version: 1.6.9-release
+#Update time: 2025-11-13 15:26:28 UTC+8
+#Update content: 追加一个遗漏的
 
 #Homepage: https://github.com/TG-Twilight/AWAvenue-Ads-Rule
 #License: https://github.com/TG-Twilight/AWAvenue-Ads-Rule/blob/main/LICENSE
@@ -13,6 +13,7 @@
 .1500022744.vodplayer.wxamedia.com
 .1500026601.vodplayer.wxamedia.com
 .8le8le.com
+.8rn1y79f02-1.algolianet.com
 .a0.app.xiaomi.com
 .aaid.umeng.com
 .abtest-ch.snssdk.com
@@ -20,7 +21,8 @@
 .ad-scope.com
 .ad-scope.com.cn
 .ad-sdk-config.youdao.com
-.ad-sdk.huxiu.com
+.ad-splash-tracking.hktvmall.com
+.ad-splash.hktvmall.com
 .ad.12306.cn
 .ad.51wnl.com
 .ad.api.3g.youku.com
@@ -34,16 +36,17 @@
 .ad.qingting.fm
 .ad.qq.com
 .ad.richmob.cn
+.ad.shunchangzhixing.com
 .ad.tencentmusic.com
 .ad.toutiao.com
 .ad.v3mh.com
 .ad.winrar.com.cn
 .ad.ximalaya.com
 .ad.zijieapi.com
-.ad2.ettoday.net
 .adapi.izuiyou.com
 .adapi.yynetwk.com
 .adashbc.ut.taobao.com
+.adashx.m.taobao.com
 .adc.hpplay.cn
 .adcdn.hpplay.cn
 .adcdn.tencentmusic.com
@@ -56,10 +59,10 @@
 .adexp.liftoff.io
 .adexpo.tencentmusic.com
 .adfilter.imtt.qq.com
-.adfstat.yandex.ru
 .adguanggao.eee114.com
 .adjust.cn
 .adjust.com
+.adks.hpplay.cn
 .adlink-api.huan.tv
 .adm.funshion.com
 .ads-api-o.api.leiniao.com
@@ -67,6 +70,7 @@
 .ads-api.twitter.com
 .ads-img-al.xhscdn.com
 .ads-img-qc.xhscdn.com
+.ads-jp.tiktok.com
 .ads-marketing-vivofs.vivo.com.cn
 .ads-sdk-api.ranfenghd.com
 .ads-sg.tiktok.com
@@ -79,7 +83,6 @@
 .ads.icloseli.cn
 .ads.inmobi.com
 .ads.linkedin.com
-.ads.music.126.net
 .ads.pinterest.com
 .ads.pubmatic.com
 .ads.raidrive.com
@@ -118,6 +121,7 @@
 .adsmind.gdtimg.com
 .adsmind.ugdtimg.com
 .adsp.xunlei.com
+.adstat.izuiyou.com
 .adstats.tencentmusic.com
 .adstore-1252524079.file.myqcloud.com
 .adstore-index-1252524079.file.myqcloud.com
@@ -126,7 +130,6 @@
 .adtago.s3.amazonaws.com
 .adtech.yahooinc.com
 .adtrack.quark.cn
-.adv.fjtv.net
 .adv.sec.intl.miui.com
 .adv.sec.miui.com
 .advertising-api-eu.amazon.com
@@ -138,6 +141,7 @@
 .advice-ads.s3.amazonaws.com
 .adview.cn
 .adx-ad.smart-tv.cn
+.adx-bj-req.anythinktech.com
 .adx-bj.anythinktech.com
 .adx-cn.anythinktech.com
 .adx-drcn.op.dbankcloud.cn
@@ -151,11 +155,14 @@
 .adxlog-adnet.vivo.com.cn
 .adxserver.ad.cmvideo.cn
 .aegis.qq.com
+.aem.dentsuchina.cn
 .afs.googlesyndication.com
 .agn.aty.sohu.com
 .aiseet.aa.atianqi.com
 .ali-ad.a.yximgs.com
 .ali-p2p-v2.pull.yximgs.com
+.alicoccdncnc-xn.inter.71edge.com
+.alicoccdnct-xn.inter.71edge.com
 .alog.umeng.com
 .alogus.umeng.com
 .als.baidu.com
@@ -164,7 +171,7 @@
 .analysis.chatglm.cn
 .analysis.yozocloud.cn
 .analytics-api.samsunghealthcn.com
-.analytics.google.com
+.analytics.adjust.cn
 .analytics.pinterest.com
 .analytics.pointdrive.linkedin.com
 .analytics.query.yahoo.com
@@ -174,8 +181,8 @@
 .analytics.woozooo.com
 .analyticsengine.s3.amazonaws.com
 .analyze.lemurbrowser.com
-.android.bugly.qq.com
 .andrqd.play.aiseet.atianqi.com
+.ap.dongdianqiu.com
 .ap.dongqiudi.com
 .apd-pcdnwxlogin.teg.tencent-cloud.net
 .apd-pcdnwxnat.teg.tencent-cloud.net
@@ -185,11 +192,14 @@
 .api-access.pangolin-sdk-toutiao2.com
 .api-access.pangolin-sdk-toutiao3.com
 .api-access.pangolin-sdk-toutiao4.com
+.api-access.pangolin-sdk-toutiao5.com
 .api-ad-product.huxiu.com
 .api-adservices.apple.com
 .api-gd.hiaiabc.com
 .api-htp.beizi.biz
 .api.ad.xiaomi.com
+.api.anythinktech.com
+.api.aqyad.com
 .api.e.kuaishou.com
 .api.fu.xcultur.com
 .api.htp.hubcloud.com.cn
@@ -197,6 +207,7 @@
 .api.installer.xiaomi.com
 .api.jietuhb.com
 .api.kingdata.ksyun.com
+.api.shanghailingye.cn
 .api.ssp.xcultur.com
 .api.statsig.com
 .api.touch-moblie.com
@@ -209,6 +220,8 @@
 .applog.uc.cn
 .applog.zijieapi.com
 .applovin.com
+.appversion.115.com
+.aqyad.com
 .aspect-upush.umeng.com
 .auction.unityads.unity3d.com
 .audid-api.taobao.com
@@ -221,6 +234,7 @@
 .bdapi-ads.realmemobile.com
 .bdapi-in-ads.realmemobile.com
 .bdapi.ads.oppomobile.com
+.bdcdncnc.inter.71edge.com
 .beacon-api.aliyuncs.com
 .beacon.qq.com
 .beaconcdn.qq.com
@@ -230,8 +244,12 @@
 .bgg.baidu.com
 .bianxian.com
 .bingads.microsoft.com
+.biz.weibo.com
 .bj.ad.track.66mobi.com
 .books-analytics-events.apple.com
+.bootpreload.uve.weibo.com
+.browser.events.data.msn.cn
+.browser.events.data.msn.com
 .browsercfg-drcn.cloud.dbankcloud.cn
 .bsrv.qq.com
 .bugly.qq.com
@@ -247,7 +265,6 @@
 .cbjs.baidu.com
 .ccc-x.jd.com
 .ccs.umeng.com
-.cctv.adsunion.com
 .cdn-ad.wtzw.com
 .cdn-ads.oss-cn-shanghai.aliyuncs.com
 .cdn-f.adsmoloco.com
@@ -261,7 +278,6 @@
 .cfg.imtt.qq.com
 .chat1.jd.com
 .chiq-cloud.com
-.cj.qidian.com
 .ck.ads.oppomobile.com
 .click.chinaliftoff.io
 .click.googleanalytics.com
@@ -269,6 +285,7 @@
 .click.oneplus.cn
 .click4.chinaliftoff.io
 .clog.miguvideo.com
+.cloooud.com
 .cn-api.anythinktech.com
 .cnlogs.umeng.com
 .cnlogs.umengcloud.com
@@ -281,17 +298,19 @@
 .config.unityads.unity3d.com
 .cpc-service-square.aiclk.com
 .cpro.baidustatic.com
+.crash2.zhihu.com
 .crashlyticsreports-pa.googleapis.com
 .csjplatform.com
-.cws-cctv.conviva.com
 .d.applovin.com
 .d.applvn.com
+.da.anythinktech.com
+.data-sdk-uuid-log.d.meituan.net
 .data.ads.oppomobile.com
 .data.chsmarttv.com
 .data.mistat.india.xiaomi.com
 .data.mistat.rus.xiaomi.com
 .data.mistat.xiaomi.com
-.datk.anythinktech.com
+.datacollection.uve.weibo.com
 .dc.sigmob.cn
 .de.tynt.com
 .diagnosis.ad.xiaomi.com
@@ -322,6 +341,7 @@
 .events-drcn.op.dbankcloud.cn
 .events.reddit.com
 .events.redditmedia.com
+.fancyapi.com
 .fclog.baidu.com
 .feed-image.baidu.com
 .file.daihuo.qq.com
@@ -330,7 +350,10 @@
 .frontend-perf-service.e.kuaishou.com
 .fundingchoicesmessages.google.com
 .fxgate.baidu.com
+.g-adnet.hiaiabc.com
+.g-staic.ganjingworld.com
 .g.dtv.cn.miaozhen.com
+.g.fancyapi.com
 .g2.ganjing.world
 .game.loveota.com
 .gdfp.gifshow.com
@@ -341,6 +364,7 @@
 .ggx.cmvideo.cn
 .ggx01.miguvideo.com
 .ggx03.miguvideo.com
+.globalapi.ad.xiaomi.com
 .google-analytics.com
 .googleads.g.doubleclick-cn.net
 .googleads.g.doubleclick.net
@@ -348,7 +372,6 @@
 .googleadservices.com
 .googletagservices-cn.com
 .gorgon.youdao.com
-.graph.facebook.com
 .gromore.pangolin-sdk-toutiao.com
 .grs.dbankcloud.com
 .grs.hicloud.com
@@ -356,12 +379,14 @@
 .gvideo.qpic.cn
 .h-adashx.ut.taobao.com
 .h.trace.qq.com
+.h5.analytics.126.net
 .h5.hpplay.com.cn
 .hanlanad.com
 .hc-ssp.sm.cn
 .heads-ak.spotify.com.edgesuite.net
 .heads-fa.spotify.com
 .hexagon-analytics.com
+.hlog.bigda.com
 .hm.baidu.com
 .hmma.baidu.com
 .hotupgrade.hpplay.cn
@@ -370,6 +395,7 @@
 .httpdns.bcelive.com
 .httpdns.ocloud.oppomobile.com
 .hugelog.fcbox.com
+.huichuan-mc.sm.cn
 .huichuan.sm.cn
 .hw-ot-ad.a.yximgs.com
 .hw-p2p-pull.video-voip.com
@@ -381,6 +407,7 @@
 .i.l-new.inmobicdn.net
 .i.l.inmobicdn.net
 .iad.apple.com
+.iad.g.163.com
 .iadctest.qwapi.com
 .iadsdk.apple.com
 .iadworkbench.apple.com
@@ -395,10 +422,12 @@
 .img-c.heytapimage.com
 .img-x.jd.com
 .img.adnyg.com.w.kunlungr.com
+.img2.360buyimg.com
 .impression-asia.chinaliftoff.io
 .impression-asia.liftoff.io
 .impression.appsflyer.com
 .in.treasuredata.com
+.ios.bugly.qq.com
 .iot-eu-logser.realme.com
 .iot-logser.realme.com
 .ipv4.kkmh.com
@@ -420,12 +449,15 @@
 .ks-p2p.pull.yximgs.com
 .ks.ferlytc.com
 .ks.pull.yximgs.com
+.l6.fancyapi.com
 .launcher.smart-tv.cn
 .launcherimg.smart-tv.cn
 .lf3-ad-union-sdk.pglstatp-toutiao.com
 .lf6-ad-union-sdk.pglstatp-toutiao.com
+.lftxali.fancyapi.com
 .lh3.googleadsserving.cn
 .litchiads.com
+.live-api.hktvmall.com
 .liveats-vod.video.ptqy.gitv.tv
 .livemonitor.huan.tv
 .livep.l.aiseet.atianqi.com
@@ -451,10 +483,10 @@
 .log.avlyun.com
 .log.byteoversea.com
 .log.fc.yahoo.com
+.log.iflytek.com
 .log.kuwo.cn
 .log.pinterest.com
 .log.popin.cc
-.log.snssdk.com
 .log.stat.kugou.com
 .log.tagtic.cn
 .log.tbs.qq.com
@@ -470,6 +502,7 @@
 .logtj.kugou.com
 .logupdate.avlyun.sec.miui.com
 .luimg.baidu.com
+.m-adnet.hiaiabc.com
 .m.ad.zhangyue.com
 .m.atm.youku.com
 .m1.ad.10010.com
@@ -477,6 +510,7 @@
 .masdkv6.3g.qq.com
 .mazu.m.qq.com
 .mbdlog.iqiyi.com
+.mcs.zijieapi.com
 .metrics.data.hicloud.com
 .metrics.icloud.com
 .metrics.mzstatic.com
@@ -485,11 +519,10 @@
 .mi.gdt.qq.com
 .miav-cse.avlyun.com
 .micro-xdb.com
-.mime.baidu.com
 .mini-prog-drm.vodplayvideo.net
 .mission-pub.smart-tv.cn
 .miui-fxcse.avlyun.com
-.mmgame.qpic.cn
+.mlog.bigda.com
 .mnqlog.ldmnq.com
 .moatads.com
 .mobads-logs.baidu.com
@@ -497,8 +530,8 @@
 .mobads.baidu.com
 .mobaliyun.res.mgtv.com
 .mobile.da.mgtv.com
+.mobilead.kuwo.cn
 .mobilelog.upqzfile.com
-.mon.zijieapi.com
 .monitor-ads-test.huan.tv
 .monitor-uu.play.aiseet.atianqi.com
 .monitor.music.qq.com
@@ -514,8 +547,10 @@
 .mtj.baidu.com
 .nadvideo2.baidu.com
 .newvoice.chiq5.smart-tv.cn
+.nex.163.com
 .nmetrics.samsung.com
 .notes-analytics-events.apple.com
+.notify.sec.miui.com
 .nsclick.baidu.com
 .o-sdk.mediation.unity3d.com
 .o2o.api.xiaomi.com
@@ -527,6 +562,7 @@
 .open.kuaishouzt.com
 .open.kwaizt.com
 .open.snssdk.com
+.openadapi.fancydsp.com
 .optimus-ads.amap.com
 .orbit.jd.com
 .oss.cdn.aiclk.com
@@ -536,7 +572,9 @@
 .outlookads.live.com
 .p.l.qq.com
 .p.s.360.cn
+.p1-be-pack-sign.pglstatp-toutiao.com
 .p1-lm.adkwai.com
+.p2-be-pack-sign.pglstatp-toutiao.com
 .p2-lm.adkwai.com
 .p2pchunk-table.douyucdn.cn
 .p2plive-ali.douyucdn.cn
@@ -545,14 +583,19 @@
 .p3-be-pack-sign.pglstatp-toutiao.com
 .p3-lm.adkwai.com
 .p3-tt.byteimg.com
+.p4-be-pack-sign.pglstatp-toutiao.com
+.p5-be-pack-sign.pglstatp-toutiao.com
 .p6-be-pack-sign.pglstatp-toutiao.com
 .pagead2.googleadservices.com
 .pagead2.googlesyndication.com
+.pangolin-sdk-toutiao-b.com
 .pay.sboot.cn
 .pcdn.xmcdn.com
+.pcdn.yximgs.com
 .pcm-img.zhls.qq.com
 .pgdt.gtimg.cn
 .pgdt.ugdtimg.com
+.pglstatp-toutiao.com
 .pig.pupuapi.com
 .pin.hpplay.cn
 .pixon.ads-pixiv.net
@@ -563,6 +606,7 @@
 .policy.video.ptqy.gitv.tv
 .pos.baidu.com
 .prod-mediate-events.applovin.com
+.promotion-partner.kuaishou.com
 .proxy.advp.apple.com
 .public.gdtimg.com
 .q.i.gdt.qq.com
@@ -571,8 +615,11 @@
 .qzs.gdtimg.com
 .recommend-drcn.hms.dbankcloud.cn
 .report.tv.kohesport.qq.com
+.res.hubcloud.com.cn
 .res1.applovin.com
 .res1.hubcloud.com.cn
+.res2.hubcloud.com.cn
+.res3.hubcloud.com.cn
 .resolve.umeng.com
 .review.gdtimg.com
 .rlog.popin.cc
@@ -590,19 +637,21 @@
 .saas.hpplay.cn
 .samsung-com.112.2o7.net
 .samsungads.com
-.sanme2.taisantech.com
 .saxysec.com
-.scdown.qq.com
 .scs.openspeech.cn
 .sdk-ab-config.qquanquan.com
 .sdk-cache.video.ptqy.gitv.tv
 .sdk.1rtb.net
 .sdk.ad.smaato.net
+.sdk.adx.adwangmai.com
+.sdk.aqyad.com
 .sdk.beizi.biz
+.sdk.cferw.com
 .sdk.e.qq.com
 .sdk.hzsanjiaomao.com
 .sdk.markmedia.com.cn
 .sdk.mobads.adwangmai.com
+.sdkapi.cloooud.com
 .sdkauth.hpplay.cn
 .sdkconf.avlyun.com
 .sdkconfig.ad.intl.xiaomi.com
@@ -611,6 +660,7 @@
 .sdkconfig.video.qq.com
 .sdkoptedge.chinanetcenter.com
 .sdktmp.hubcloud.com.cn
+.sdownload.stargame.com
 .search.ixigua.com
 .search3-search.ixigua.com
 .search5-search-hl.ixigua.com
@@ -618,6 +668,7 @@
 .securemetrics.apple.com
 .securepubads.g.doubleclick.net
 .sensors-log.dongqiudi.com
+.sentry.music.163.com
 .service.changhong.upgrade2.huan.tv
 .service.vmos.cn
 .sf16-static.i18n-pglstatp.com
@@ -633,9 +684,13 @@
 .sms.ads.oppomobile.com
 .sngmta.qq.com
 .snowflake.qq.com
+.ssp.cloooud.com
+.staging-notify.sec.miui.com
 .stat.dongqiudi.com
 .stat.y.qq.com
+.static-s.iqiyi.com
 .static.ads-twitter.com
+.statichf.shihuocdn.cn
 .statics.woozooo.com
 .stats.wp.com
 .statsigapi.net
@@ -648,11 +703,14 @@
 .szbdyd.com
 .t-dsp.pinduoduo.com
 .t.applovin.com
+.t.l.qq.com
 .t.teads.tv
 .t.track.ad.xiaomi.com
+.t002.ottcn.com
 .t1.a.market.xiaomi.com
 .t1.teads.tv
 .t2.a.market.xiaomi.com
+.t2.fancyapi.com
 .t3.a.market.xiaomi.com
 .t7z.cupid.iqiyi.com
 .t7z.cupid.ptqy.gitv.tv
@@ -660,23 +718,35 @@
 .tdc.qq.com
 .tdsdk.cpatrk.net
 .tdsdk.xdrig.com
+.telecome.cn
 .telemetry.sdk.inmobi.com
 .tencent-dtv.m.cn.miaozhen.com
-.terms-drcn.platform.dbankcloud.cn
 .test.ad.xiaomi.com
+.test.e.ad.xiaomi.com
 .tj.b.qq.com
 .tj.video.qq.com
+.tk.anythinktech.com
 .tmead.y.qq.com
 .tmeadcomm.y.qq.com
 .tmfmazu-wangka.m.qq.com
 .tmfmazu.m.qq.com
 .tmfsdk.m.qq.com
 .tmfsdktcpv4.m.qq.com
+.tnc0-aliec2.zijieapi.com
+.tnc0-alisc1.zijieapi.com
+.tnc0-bjlgy.zijieapi.com
+.tnc3-aliec1.toutiaoapi.com
 .tnc3-aliec2.bytedance.com
+.tnc3-aliec2.snssdk.com
 .tnc3-aliec2.toutiaoapi.com
+.tnc3-aliec2.zijieapi.com
 .tnc3-alisc1.bytedance.com
+.tnc3-alisc1.snssdk.com
+.tnc3-alisc1.toutiaoapi.com
 .tnc3-alisc1.zijieapi.com
+.tnc3-alisc2.zijieapi.com
 .tnc3-bjlgy.bytedance.com
+.tnc3-bjlgy.snssdk.com
 .tnc3-bjlgy.toutiaoapi.com
 .tnc3-bjlgy.zijieapi.com
 .toblog.ctobsnssdk.com
@@ -684,6 +754,7 @@
 .tpc.googlesyndication-cn.com
 .tpc.googlesyndication.com
 .tr-asia.adsmoloco.com
+.trace.aqyad.com
 .trace.qq.com
 .tracelog-debug.aiclk.com
 .tracelog-debug.qquanquan.com
@@ -713,6 +784,7 @@
 .umengacs.m.taobao.com
 .umengjmacs.m.taobao.com
 .umini.shujupie.com
+.union-mlog.bigda.com
 .union.baidu.cn
 .union.baidu.com
 .update.avlyun.sec.miui.com
@@ -722,6 +794,7 @@
 .uranus.jd.com
 .us.l.qq.com
 .usr-api.aiclk.com
+.utoken.umeng.com
 .v.110route.cn
 .v.adintl.cn
 .v.adx.hubcloud.com.cn
@@ -732,7 +805,6 @@
 .v2mi.gdt.qq.com
 .v3-ad.video.yximgs.com
 .v3.gdt.qq.com
-.vali-ugc.cp31.ott.cibntv.net
 .vd6.l.qq.com
 .vi.l.qq.com
 .video-ad.sm.cn
@@ -779,10 +851,24 @@
 .xlviiirdr.com
 .xlviirdr.com
 .xycdn.com
+.yk-ssp-ad.cp31.ott.cibntv.net
 .yk-ssp.ad.youku.com
+.ykad-data.cp31.ott.cibntv.net
 .ykad-data.youku.com
 .ykad-gateway.youku.com
 .youku-acs.m.taobao.com
 .ytx-file.110route.cn
 .zeus.ad.xiaomi.com
 .zhihu-web-analytics.zhihu.com
+.zxid-m.mobileservice.cn
+.1rtb.com
+.a.market.xiaomi.com
+.ad.gameley.com
+.adintl.cn
+.adx.adwangmai.com
+.data.hicloud.com
+.log.aliyuncs.com
+.ubixioe.com
+.vlion.cn
+.yfanads.com
+.zhangyuyidong.cn
